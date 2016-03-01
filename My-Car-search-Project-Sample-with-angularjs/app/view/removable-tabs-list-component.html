@@ -1,0 +1,12 @@
+<div class="tabs-list-container">
+	<div class="tab-item" ng-repeat="tabItem in tabsModel">
+		<div class="remove-button" ng-click="handleRemoveButtonClick(event, tabItem)">
+			x
+			{{ tabItem.title | translate }}
+			{{ tabItem.label }}
+			{{ tabItem.postLabel }}
+			<div class="icon">
+			</div>
+		</div>
+	</div>
+</div>

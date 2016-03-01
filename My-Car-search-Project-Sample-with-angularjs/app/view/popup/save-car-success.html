@@ -1,0 +1,20 @@
+<div class="popup success-save">
+	<div class="content">
+		<img ng-src="{{ ngDialogData.car.mainImageURL }}" />
+		<div class="message-wrapper">
+			<div class="label">
+				{{ ngDialogData.car.make | specialLabelsTranslator }} {{ ngDialogData.car.model | specialLabelsTranslator }}
+			</div>
+			<div class="message">
+				{{ 'is added' | translate }}
+			</div>
+			<div class="message">
+				{{ 'to parking' | translate }}
+			</div>
+		</div>
+
+		<div class="mark-wrapper">
+			<div class="mark"></div>
+		</div>
+	</div>
+</div>

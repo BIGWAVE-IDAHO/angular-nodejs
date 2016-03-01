@@ -1,0 +1,1765 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.7.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de\n"
+
+#: app/view/car-search-component.html
+msgid "Accident Vehicles"
+msgstr "Unfallfahrzeuge"
+
+#: app/view/car-search-component.html
+msgid "Ad age"
+msgstr "Standtage"
+
+#: app/view/car-list-filter-panel.html
+msgid "Ad age from"
+msgstr "Standtage von"
+
+#: app/view/car-list-filter-panel.html
+msgid "Ad age to"
+msgstr "Standtage bis"
+
+#: app/view/expanded-ad-view.html
+msgid "Additional"
+msgstr "Zusätzliches"
+
+#: app/view/car-search-component.html
+msgid "All car types"
+msgstr "Alle Arten"
+
+#: app/view/car-search-component.html app/view/dealer-search.html
+msgid "Any"
+msgstr "Beliebig"
+
+#: app/index.html
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: app/index.html
+msgid "Car Search"
+msgstr "Auto Suche"
+
+#: app/index.html
+msgid "CarDetective"
+msgstr "CarDetective"
+
+#: app/index.html
+msgid "Change"
+msgstr "Ändern"
+
+#: app/index.html app/view/forgot-password.html
+msgid "Change Password"
+msgstr "Passwort ändern"
+
+#: app/view/forgot-password.html
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: app/view/car-list-filter-panel.html
+msgid "Clear filter"
+msgstr "Filter zurücksetzten"
+
+#: app/view/car-search-component.html
+msgid "Clear searchform"
+msgstr "Suche zurücksetzten"
+
+#: app/view/car-list-filter-panel.html app/view/car-search-component.html
+msgid "Color"
+msgstr "Farbe"
+
+#: app/view/expanded-ad-view.html
+msgid "Comfort"
+msgstr "Komfort"
+
+#: app/view/register.html
+msgid "Company:"
+msgstr "Firma:"
+
+#: app/view/car-search-component.html
+msgid "Condition"
+msgstr "Fahrzeugart"
+
+#: app/view/register.html
+msgid "Contacts"
+msgstr ""
+
+#: app/view/car-list-filter-panel.html
+msgid "Dealer / Private"
+msgstr "Händler / Privat"
+
+#: app/index.html app/view/dealer-search.html
+msgid "Dealer Search"
+msgstr "Händlersuche"
+
+#: app/view/car-search-component.html
+msgid "Doors"
+msgstr "Türen"
+
+#: app/view/login.html
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: app/view/car-search-component.html
+msgid "EZ"
+msgstr "EZ"
+
+#: app/view/car-search-component.html
+msgid "Env. Badge"
+msgstr "Umweltplakette"
+
+#: app/view/expanded-ad-view.html
+msgid "Equipment"
+msgstr "Ausstattung"
+
+#: app/view/car-search-component.html
+msgid "Euro norm"
+msgstr "Euronorm"
+
+#: app/view/expanded-ad-view.html
+msgid "Extras"
+msgstr "Extras"
+
+#: app/view/register.html
+msgid "First Name:"
+msgstr "Vorname:"
+
+#: app/view/expanded-ad-view.html
+msgid "First registration:"
+msgstr "Erstzulassung:"
+
+#: app/view/login.html
+msgid "You forgot your password?"
+msgstr "Sie haben ihr Passwort vergessen?"
+
+#: app/view/car-search-component.html
+msgid "From"
+msgstr "Von"
+
+msgid "from"
+msgstr "von"
+
+#: app/view/car-list-filter-panel.html app/view/car-search-component.html
+msgid "Fuel Type"
+msgstr "Kraftstoff"
+
+#: app/view/expanded-ad-view.html
+msgid "Fuel:"
+msgstr "Kraftstoff:"
+
+#: app/view/car-search-component.html
+msgid "Gearbox"
+msgstr "Getriebe"
+
+#: app/view/expanded-ad-view.html
+msgid "Gearbox:"
+msgstr "Getriebe:"
+
+#: app/view/car-search-component.html
+msgid "Car Search"
+msgstr "Fahrzeugsuche"
+
+#: app/view/register.html
+msgid "Honorific:"
+msgstr "Anrede:"
+
+#: app/view/forgot-password.html
+msgid "How to reset my password"
+msgstr "Wie Sie Ihr Passwort zurücksetzten können."
+
+#: app/view/expanded-ad-view.html
+msgid "Incl 19% vat"
+msgstr "Inkl. 19% MWSt."
+
+#: app/view/login.html
+msgid "Incorrect username or password"
+msgstr "Benutzername / Passwort fehlerhaft"
+
+#: app/view/car-search-component.html
+msgid "KM Stand"
+msgstr "Km Stand"
+
+#: app/view/expanded-ad-view.html
+msgid "KW"
+msgstr "KW"
+
+#: app/view/register.html
+msgid "Last Name:"
+msgstr "Nachname:"
+
+#: app/index.html
+msgid "Login"
+msgstr "Login"
+
+#: app/index.html
+msgid "Logout"
+msgstr "Abmelden"
+
+#: app/view/car-list-filter-panel.html
+msgid "Make"
+msgstr ""
+
+#: app/view/car-search-component.html
+msgid "Manufacturer"
+msgstr "Marken"
+
+#: app/view/car-search-component.html
+msgid "Mileage"
+msgstr "KM"
+
+#: app/view/car-list-filter-panel.html
+msgid "Mileage from"
+msgstr "KM von"
+
+#: app/view/car-list-filter-panel.html
+msgid "Mileage to"
+msgstr "KM bis"
+
+#: app/view/expanded-ad-view.html
+msgid "Mileage:"
+msgstr "Kilometer:"
+
+#: app/view/car-list-filter-panel.html app/view/car-search-component.html
+msgid "Model"
+msgstr "Modell"
+
+#: app/view/car-list-filter-panel.html
+msgid "Month"
+msgstr "Monat"
+
+#: app/view/register.html
+msgid "Mr"
+msgstr "Herr"
+
+#: app/view/register.html
+msgid "Mrs"
+msgstr "Frau"
+
+#: app/index.html
+msgid "My Inventory"
+msgstr "Mein Bestand"
+
+#: app/index.html
+msgid "My Parking"
+msgstr ""
+
+#: app/view/dealer-row.html
+msgid "My autohouse"
+msgstr "Mein Autohaus"
+
+#: app/view/dealer-row.html
+msgid "My branch"
+msgstr ""
+
+#: app/index.html
+msgid "My branches"
+msgstr ""
+
+#: app/view/dealer-row.html
+msgid "My competitors"
+msgstr "Meine Konkurrenz"
+
+#: app/index.html app/view/dealer-row.html
+msgid "My group"
+msgstr "Meine Gruppe"
+
+#: app/view/dealer-search.html
+msgid "Name"
+msgstr "Name"
+
+#: app/index.html
+msgid "New Password"
+msgstr "Neues Passwort"
+
+#: app/view/result-list.html
+msgid "Next Page"
+msgstr "Nächste Seite"
+
+#: app/view/login.html
+msgid "Not Registered?"
+msgstr "Nicht registriert?"
+
+#: app/index.html
+msgid "Old Password"
+msgstr "Altes Passwort"
+
+#: app/view/result-list.html
+msgid "Page"
+msgstr "Seite"
+
+#: app/view/login.html
+msgid "Password"
+msgstr "Passwort"
+
+#: app/view/forgot-password.html
+msgid "Password Change"
+msgstr "Passwort ändern"
+
+#: app/view/register.html
+msgid "Password:"
+msgstr "Passwort:"
+
+#: app/view/register.html
+msgid "Phone:"
+msgstr "Telefon:"
+
+#: app/view/forgot-password.html app/view/register.html
+msgid "Please enter a valid e-mail!"
+msgstr "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+
+#: app/view/register.html
+msgid "Please enter your company name!"
+msgstr "Bitte geben Sie Ihren Firmennamen ein."
+
+#: app/view/forgot-password.html app/view/register.html
+msgid "Please enter your e-mail!"
+msgstr "Bitte geben Sie Ihre E-Mail-Adresse ein."
+
+#: app/view/forgot-password.html
+msgid "Please enter your email"
+msgstr "Bitte geben Sie Ihre E-Mail-Adresse ein."
+
+#: app/view/register.html
+msgid "Please enter your first name!"
+msgstr "Bitte geben Sie Ihren Vornamen ein."
+
+#: app/view/register.html
+msgid "Please enter your last name!"
+msgstr "Bitte geben Sie Ihren Nachnamen ein."
+
+#: app/view/forgot-password.html
+msgid "Please enter your new password"
+msgstr "Bitte geben Sie Ihr Passwort ein."
+
+#: app/view/forgot-password.html
+msgid "Please enter your password once again!"
+msgstr "Bitte wiederholen Sie Ihr Passwort."
+
+#: app/view/forgot-password.html app/view/register.html
+msgid "Please enter your password!"
+msgstr "Bitte geben Sie Ihr Passwort ein."
+
+#: app/view/register.html
+msgid "Please enter your phone!"
+msgstr "Bitte geben Sie Ihre Telefonnummer ein."
+
+#: app/view/forgot-password.html
+msgid "Please repeat your password"
+msgstr "Bitte wiederholen Sie Ihr Passwort."
+
+#: app/view/car-search-component.html
+msgid "Power"
+msgstr "Leistung"
+
+#: app/view/car-list-filter-panel.html
+msgid "Power from"
+msgstr "Leistung von"
+
+#: app/view/car-list-filter-panel.html
+msgid "Power to"
+msgstr "Leistung bis"
+
+#: app/view/expanded-ad-view.html
+msgid "Power:"
+msgstr "Leistung:"
+
+#: app/view/result-list.html
+msgid "Previous Page"
+msgstr "Seite zurück"
+
+#: app/view/car-search-component.html
+msgid "Price"
+msgstr "Preis"
+
+#: app/view/car-list-filter-panel.html
+msgid "Price from"
+msgstr "Preis von"
+
+#: app/view/car-list-filter-panel.html
+msgid "Price to"
+msgstr "Preis bis"
+
+#: app/view/car-list-filter-panel.html
+msgid "Provider Name"
+msgstr ""
+
+#: app/view/car-list-filter-panel.html
+msgid "Provider information"
+msgstr ""
+
+#: app/view/car-search-component.html app/view/dealer-search.html
+msgid "Radius"
+msgstr "Umkreis"
+
+#: app/index.html app/view/register.html
+msgid "Register"
+msgstr "Registrieren"
+
+#: app/view/register.html
+msgid "Registration"
+msgstr "Registrierung"
+
+#: app/index.html
+msgid "Repeat Password"
+msgstr "Passwort wiederholen"
+
+#: app/view/register.html
+msgid "Repeat Password:"
+msgstr "Passwort wiederholen:"
+
+#: app/view/car-list-filter-panel.html
+msgid "Result filter"
+msgstr "Ergebnisfilter"
+
+#: app/view/car-search-component.html
+msgid "Save searchresult"
+msgstr "Ergebnis speichern"
+
+#: app/view/car-search-component.html app/view/dealer-search.html
+msgid "Search"
+msgstr "Suche"
+
+#: app/view/car-search-component.html
+msgid "Seats"
+msgstr "Sitze"
+
+#: app/view/expanded-ad-view.html
+msgid "Seller"
+msgstr "Verkäufer"
+
+#: app/view/car-search-component.html
+msgid "Seller Type"
+msgstr "Anbieter"
+
+#: app/view/login.html
+msgid "Sign In"
+msgstr "Einloggen"
+
+#: app/view/login.html
+msgid "Some error occured"
+msgstr "Ein Fehler ist aufgetreten."
+
+#: app/view/car-search-component.html
+msgid "Specific car types"
+msgstr "Ausgewählte Fahrzeugtypen"
+
+#: app/view/car-search-component.html
+msgid "Stocks"
+msgstr "Gebrauchtwagenbörsen"
+
+#: app/view/register.html
+msgid "The company name is required."
+msgstr "Bitte geben Sie Ihre Firma ein."
+
+#: app/view/forgot-password.html app/view/register.html
+msgid "The e-mail is required."
+msgstr "Bitte geben Sie Ihre E-Mail-Adresse ein."
+
+#: app/view/register.html
+msgid "The first name is required."
+msgstr "Bitte geben Sie Ihren Vornamen ein."
+
+#: app/view/register.html
+msgid "The last name is required."
+msgstr "Bitte geben Sie Ihren Nachnamen ein."
+
+#: app/view/forgot-password.html app/view/register.html
+msgid "The password is required."
+msgstr "Bitte geben Sie Ihr Passwort ein."
+
+#: app/view/register.html
+msgid "The phone is required."
+msgstr "Bitte geben Sie Ihre Telefonnummer ein."
+
+#: app/view/register.html
+msgid "The second password is required."
+msgstr "Bitte geben Sie Ihre Passwort erneut ein."
+
+#: app/view/forgot-password.html app/view/register.html
+msgid "This is not a valid e-mail."
+msgstr "Keine gültige E-Mail-Adresse."
+
+#: app/view/login.html
+msgid "This user is already logged in!"
+msgstr "Dieser Benutzer ist schon angemeldet."
+
+#: app/view/car-search-component.html
+msgid "to"
+msgstr "bis"
+
+msgid "To"
+msgstr "Bis"
+
+#: app/view/forgot-password.html
+msgid ""
+"To reset your password, please enter your registered email address. On this "
+"email address you will recieve an activation link"
+msgstr ""
+"Bitte geben Sie Ihre E-Mail-Adresse ein um Ihr Passwort zurück zu setzten. "
+"An diese E-Mail-Adresse schicken wir den Aktivierungs-Link."
+
+#: app/view/register.html
+msgid "Username:"
+msgstr "Benutzername:"
+
+#: app/view/car-search-component.html
+msgid "VIN"
+msgstr "VIN"
+
+#: app/view/car-search-component.html
+msgid "VIN search"
+msgstr "VIN abfrage"
+
+#: app/view/expanded-ad-view.html
+msgid "Vehicle can be found in:"
+msgstr "gefunden bei:"
+
+#: app/view/car-list-filter-panel.html app/view/car-search-component.html
+msgid "Version"
+msgstr "Version"
+
+#: app/view/car-list-filter-panel.html app/view/car-search-component.html
+msgid "First registration"
+msgstr "Erstzulassung"
+
+#: app/view/login.html
+msgid "Your profile still needs to be verified"
+msgstr "Ihr Profil muss noch geprüft werden."
+
+#: app/view/car-search-component.html
+msgid "ZIP Code"
+msgstr "PLZ"
+
+#: app/view/car-list-filter-panel.html app/view/dealer-search.html
+msgid "Zip code"
+msgstr "PLZ"
+
+msgid "ZIP"
+msgstr "PLZ"
+
+#: app/view/overall-search-result-statistics.html
+msgid "ad active 𝝓"
+msgstr "𝝓 Standtage"
+
+#: app/index.html
+msgid "forgot password"
+msgstr "Passwort vergessen"
+
+#: app/view/overall-search-result-statistics.html
+msgid "last search"
+msgstr "letzte Suche"
+
+#: app/view/overall-search-result-statistics.html
+msgid "max price"
+msgstr "max"
+
+#: app/view/overall-search-result-statistics.html
+msgid "mileage 𝝓"
+msgstr "Km 𝝓"
+
+#: app/view/overall-search-result-statistics.html
+msgid "min price"
+msgstr "min"
+
+#: app/view/overall-search-result-statistics.html
+msgid "price 𝝓"
+msgstr "𝝓"
+
+#: app/view/overall-search-result-statistics.html
+msgid "results"
+msgstr "Anzahl"
+
+#: manually added
+
+msgid "Welcome"
+msgstr "Willkommen"
+
+msgid "Mr"
+msgstr "Herr"
+
+msgid "Mrs"
+msgstr "Frau"
+
+msgid "P"
+msgstr "P"
+
+msgid "D"
+msgstr "H"
+
+msgid "KW"
+msgstr "KW"
+
+msgid "HP"
+msgstr "PS"
+
+msgid "Exterior color"
+msgstr "Außenfarbe"
+
+msgid "Beige"
+msgstr "Beige"
+
+msgid "Black"
+msgstr "Schwarz"
+
+msgid "Blue"
+msgstr "Blau"
+
+msgid "Bronze"
+msgstr "Bronze"
+
+msgid "Brown"
+msgstr "Braun"
+
+msgid "Gold"
+msgstr "Gold"
+
+msgid "Green"
+msgstr "Grün"
+
+msgid "Grey"
+msgstr "Grau"
+
+msgid "Orange"
+msgstr "Orange"
+
+msgid "Purple"
+msgstr "Lila"
+
+msgid "Red"
+msgstr "Rot"
+
+msgid "Silver"
+msgstr "Silber"
+
+msgid "White"
+msgstr "Weiß"
+
+msgid "Yellow"
+msgstr "Gelb"
+
+msgid "1 week"
+msgstr "1 Woche"
+
+msgid "1 day"
+msgstr "1 Tag"
+
+msgid "2 weeks"
+msgstr "2 Wochen"
+
+msgid "3 days"
+msgstr "3 Tage"
+
+msgid "Do not show"
+msgstr "Nicht anzeigen"
+
+msgid "Show only"
+msgstr "Nur anzeigen"
+
+msgid "Natural Gas"
+msgstr "Erdgas (CNG)"
+
+msgid "Electric"
+msgstr "Elektro"
+
+msgid "Hybrid"
+msgstr "Hybrid"
+
+msgid "Hybrid(all)"
+msgstr "Hybrid(alle)"
+
+msgid "Gas(all)"
+msgstr "Gas(alle)"
+
+msgid "Hydrogen"
+msgstr "Wasserstoff"
+
+msgid "Other"
+msgstr "Andere"
+
+msgid "Petrol"
+msgstr "Benzin"
+
+msgid "Dealer"
+msgstr "Händler"
+
+msgid "Owner"
+msgstr "Privatanbieter"
+
+msgid "Automatic transmission"
+msgstr "Automatik"
+
+msgid "Manual gearbox"
+msgstr "Schaltgetriebe"
+
+msgid "Semi-automatic"
+msgstr "Halbautomatik"
+
+msgid "Hide Extras"
+msgstr "Extras ausblenden"
+
+msgid "Show Extras"
+msgstr "Extras anzeigen"
+
+msgid "Show Filters"
+msgstr "Filter anzeigen"
+
+msgid "Hide Filters"
+msgstr "Filter ausblenden"
+
+msgid "Central locking"
+msgstr "Zentralverriegelung"
+
+msgid "Cruise control"
+msgstr "Tempomat"
+
+msgid "Adaptive lighting"
+msgstr "Kurvenlicht"
+
+msgid "Disabled accessible"
+msgstr "Behindertengerecht"
+
+msgid "Electric heated seats"
+msgstr "Sitzheizung"
+
+msgid "Electric side mirror"
+msgstr "Elektr. Seitenspiegel"
+
+msgid "Electric windows"
+msgstr "Elektr. Fensterheber"
+
+msgid "Hands-free kit"
+msgstr "Freisprecheinrichtung"
+
+msgid "Isofix (child seat anchor points)"
+msgstr "Isofix (Kindersitzbefestigung)"
+
+msgid "Leather seats"
+msgstr "Lederausstattung"
+
+msgid "Non-smoker vehicle"
+msgstr "Nichtraucher Fahrzeug"
+
+msgid "Head-up display"
+msgstr "Head-Up Display"
+
+msgid "Metallic"
+msgstr "Metallic"
+
+msgid "MP3 interface"
+msgstr "MP3-Schnittstelle"
+
+msgid "Panoramic roof"
+msgstr "Panoramadach"
+
+msgid "ABS"
+msgstr "ABS"
+
+msgid "Alloy wheels"
+msgstr "Leichtmetallfelgen"
+
+msgid "Auxiliary heating"
+msgstr "Standheizung"
+
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+msgid "Winter tires"
+msgstr "Winterreifen"
+
+msgid "CD Multichanger"
+msgstr "CD Wechsler"
+
+msgid "CD player"
+msgstr "CD Spieler"
+
+msgid "Sunroof"
+msgstr "Schiebedach"
+
+msgid "Sports suspension"
+msgstr "Sportfahrwerk"
+
+msgid "Trailer coupling"
+msgstr "Anhängerkupplung"
+
+msgid "Traction control"
+msgstr "Traktionskontrolle"
+
+msgid "Tuner/radio"
+msgstr "Radio"
+
+msgid "Power Assisted Steering"
+msgstr "Servolenkung"
+
+msgid "Rain sensor"
+msgstr "Regensensor"
+
+msgid "Roof rack"
+msgstr "Dachträger"
+
+msgid "Sport seats"
+msgstr "Sportsitze"
+
+msgid "Suitable for Vegetable Oil"
+msgstr "Geeignet für Pflanzenöl"
+
+msgid "Xenon headlights"
+msgstr "Xenonscheinwerfer"
+
+msgid "Full service history"
+msgstr "Scheckheftgepflegt"
+
+msgid "Daytime running lights"
+msgstr "Tagfahrlicht"
+
+msgid "Sports package"
+msgstr "Sportpaket"
+
+msgid "Taxi"
+msgstr "Taxi"
+
+msgid "Start-stop system"
+msgstr "Start/Stop-Automatik"
+
+msgid "Four wheel drive"
+msgstr "Allrad"
+
+msgid "Ski bag"
+msgstr "Skisack"
+
+msgid "E10-enabled"
+msgstr "E10 geeignet"
+
+msgid "Fog lamp"
+msgstr "Nebelscheinwerfer"
+
+msgid "Warranty"
+msgstr "Garantie"
+
+msgid "Immobilizer"
+msgstr "Wegfahrsperre"
+
+msgid "Light sensor"
+msgstr "Lichtsensor"
+
+msgid "Multifunction steering wheel"
+msgstr "Multifunktionslenkrad"
+
+msgid "Navigation system"
+msgstr "Navigationssystem"
+
+msgid "Parking sensors"
+msgstr "Einparkhilfe"
+
+msgid "New HU"
+msgstr "Neue HU"
+
+msgid "On-board computer"
+msgstr "Bordcomputer"
+
+msgid "Particle filter"
+msgstr "Partikelfilter"
+
+msgid "Image"
+msgstr "Bild"
+
+msgid "44KW (60 HP)"
+msgstr "44KW (60 PS)"
+
+msgid "55KW (75 HP)"
+msgstr "55KW (75 PS)"
+
+msgid "66KW (90 HP)"
+msgstr "66KW (90 PS)"
+
+msgid "81KW (110 HP)"
+msgstr "81KW (110 PS)"
+
+msgid "92KW (125 HP)"
+msgstr "92KW (125 PS)"
+
+msgid "110KW (150 HP)"
+msgstr "110KW (150 PS)"
+
+msgid "147KW (200 HP)"
+msgstr "147KW (200 PS)"
+
+msgid "220KW (300 HP)"
+msgstr "220KW (300 PS)"
+
+msgid "257KW (350 HP)"
+msgstr "257KW (350 PS)"
+
+msgid "Used"
+msgstr "Gebraucht" 
+
+msgid "New"
+msgstr "Neu"
+
+msgid "Day admission"
+msgstr "Tageszulassung"
+
+msgid "Oldtimer"
+msgstr "Oldtimer"
+
+msgid "Years Cart"
+msgstr "Jahreswagen"
+
+msgid "Demonstration"
+msgstr "Vorführwagen"
+
+msgid "10 km"
+msgstr "10 km"
+
+msgid "20 km"
+msgstr "20 km"
+
+msgid "50 km"
+msgstr "50 km"
+
+msgid "100 km"
+msgstr "100 km"
+
+msgid "200 km"
+msgstr "200 km"
+
+msgid "4x4"
+msgstr "Allrad"
+
+msgid "Cabriolet/Roadster"
+msgstr "Cabrio/Roadster"
+
+msgid "Estate Car"
+msgstr "Kombi"
+
+msgid "SUV/Off road vehicle"
+msgstr "SUV/Geländewagen"
+
+msgid "Saloon"
+msgstr "Limousine"
+
+msgid "Small Car"
+msgstr "Kleinwagen"
+
+msgid "Sports Car/Coupe"
+msgstr "Sportwagen/Coupé"
+
+msgid "Van/Minibus"
+msgstr "Van/Kleinbus"
+
+msgid "Different"
+msgstr "Sonstige"
+
+msgid "Transporter"
+msgstr "Transporter"
+
+msgid "Euro1"
+msgstr "Euro1"
+
+msgid "Euro2"
+msgstr "Euro2"
+
+msgid "Euro3"
+msgstr "Euro3"
+
+msgid "Euro4"
+msgstr "Euro4"
+
+msgid "Euro5"
+msgstr "Euro5"
+
+msgid "Euro6"
+msgstr "Euro6"
+
+msgid "Basic info"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "ESP"
+msgstr "ESP"
+
+msgid "Driver airbag"
+msgstr "Fahrerairbag"
+
+msgid "Passanger airbag"
+msgstr "Beifahrerairbag"
+
+msgid "Air conditioner"
+msgstr "Klimaanlage"
+
+msgid "Alarm system"
+msgstr "Alarmanlage"
+
+msgid "Catalyst"
+msgstr "Katalysator"
+
+msgid "Wind shield"
+msgstr "Windschott(fur Cabrio)"
+
+msgid "Maintenance guide"
+msgstr "Scheckheftgepflegt"
+
+msgid "Parking camera"
+msgstr "Einparkhilfe Kamera"
+
+msgid "Self Steering"
+msgstr "Einparkhilfe selbstlenkendes System"
+
+msgid "January"
+msgstr "Januar"
+
+msgid "February"
+msgstr "Februar"
+
+msgid "March"
+msgstr "März"
+
+msgid "April"
+msgstr "April"
+
+msgid "May"
+msgstr "Mai"
+
+msgid "June"
+msgstr "Juni"
+
+msgid "July"
+msgstr "Juli"
+
+msgid "August"
+msgstr "August"
+
+msgid "September"
+msgstr "September"
+
+msgid "October"
+msgstr "Oktober"
+
+msgid "November"
+msgstr "November"
+
+msgid "December"
+msgstr "Dezember"
+
+msgid "Select all"
+msgstr "Alles auswählen"
+
+msgid "Deselect all"
+msgstr ""
+
+msgid "en"
+msgstr "en"
+
+msgid "de"
+msgstr "de"
+
+msgid "Cruise Control"
+msgstr "Tempomat"
+
+msgid "Other airbags"
+msgstr "Andere Airbags"
+
+msgid "Side airbags"
+msgstr "Seiten Airbags"
+
+msgid "Automatic parking"
+msgstr "Automatisches Einparken"
+
+msgid "Rear"
+msgstr "Hinten"
+
+msgid "CD Player"
+msgstr "CD Spieler"
+
+msgid "Tuner/Radio"
+msgstr "Radio"
+
+msgid "Rear camera"
+msgstr "Rückfahrkamera"
+
+msgid "Hybrid (petrol/electric)"
+msgstr "Hybrid (Benzin/elektrisch)"
+
+msgid "Hybrid (diesel/electric)"
+msgstr "Hybrid (Diesel/elektrisch)"
+
+msgid "Diesel"
+msgstr "Diesel"
+
+msgid "Gas"
+msgstr "Gas"
+
+msgid "LPG"
+msgstr "Autogas (LPG)"
+
+msgid "Ethanol (FFV, E85, etc.)"
+msgstr "Ethanol (FFV, E85, etc.)"
+
+msgid "4 (Green)"
+msgstr "4 (grün)"
+
+msgid "3 (Yellow)"
+msgstr "3 (gelb)"
+
+msgid "2 (Red)"
+msgstr "2 (rot)"
+
+msgid "1 (None)"
+msgstr "1 (keine)"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Providers"
+msgstr "Börse"
+
+msgid "Fuel"
+msgstr "Kraftstoff"
+
+msgid "Dealer Price"
+msgstr "Händler preis"
+
+msgid "Provider Name"
+msgstr "Anbieter"
+
+msgid "Provider information"
+msgstr "Anbieter Informationen"
+
+msgid "General Information"
+msgstr "Allgemeine Informationen"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Make"
+msgstr "Marken"
+
+msgid "Model"
+msgstr "Modell"
+
+msgid "Make:"
+msgstr "Marken:"
+
+msgid "Model:"
+msgstr "Modell:"
+
+msgid "Fuel:"
+msgstr "Kraftstoff:"
+
+msgid "Fuel:"
+msgstr "Kraftstoff:"
+
+msgid "Color:"
+msgstr "Farbe:"
+
+msgid "Doors:"
+msgstr "Türen:"
+
+msgid "Version:"
+msgstr "Version:"
+
+msgid "Condition:"
+msgstr "Fahrzeugart:"
+
+msgid "ZIP:"
+msgstr "PLZ:"
+
+msgid "ZIP Radius:"
+msgstr "Radius:"
+
+msgid "From Year:"
+msgstr "Jahr von:"
+
+msgid "To Year:"
+msgstr "Jahr bis:"
+
+msgid "From price:"
+msgstr "Preis von:"
+
+msgid "To price:"
+msgstr "Preis bis:"
+
+msgid "From power:"
+msgstr "Leistung von:"
+
+msgid "To power:"
+msgstr "Leistung bis:"
+
+msgid "From mileage:"
+msgstr "KM von:"
+
+msgid "To mileage:"
+msgstr "KM bis:"
+
+msgid "From seats:"
+msgstr "Sitze von:"
+
+msgid "To seats:"
+msgstr "Sitze bis:"
+
+msgid "Env. Badge:"
+msgstr "Umweltplakette:"
+
+msgid "Accident vehicle:"
+msgstr "Unfallfahrzeug:"
+
+msgid "Euro norm:"
+msgstr "Schadstoffklasse:"
+
+msgid "Seller type:"
+msgstr "Anbieter:"
+
+msgid "Ad age:"
+msgstr "Standtage:"
+
+msgid "My Search"
+msgstr "Ihre Suche"
+
+msgid "Year"
+msgstr "Jahr"
+
+msgid "Save Search"
+msgstr "Suche speichern"
+
+msgid "New Search"
+msgstr "Neue Suche"
+
+msgid "Edit Search"
+msgstr "Suche Verändern"
+
+msgid "Load Search"
+msgstr "Suche Laden"
+
+msgid "My Parking"
+msgstr "My Parking"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Required"
+msgstr "Pflichtfeld"
+
+msgid "Contacts"
+msgstr "Kontaktdaten"
+
+msgid "Biodiesel suitable"
+msgstr "Biodiesel geeignet"
+
+msgid "All Stocks"
+msgstr "Liste Alle (Liste wird erzeugt)"
+
+msgid "Single Stock"
+msgstr "Liste Ausgewählte"
+
+msgid "Stock Details"
+msgstr "Detail ausgewählte"
+
+msgid "Your request was processed successfully.Please check your inbox for further information."
+msgstr "Ihre Anfrage wurde erfolgreich bearbeitet. Wir haben eine E-Mail mit weiteren Informationen an die angegeben Adresse verschickt"
+
+msgid "Something went wrong. Please verify your e-mail, or try again later!"
+msgstr "Ein Fehler ist aufgetreten. Bitte prüfen Sie Ihre E-Mailadresse oder versuchen Sie es später erneut."
+
+msgid "Congratulations! You have successfully changed your password."
+msgstr "Ihr Passwort wurde erfolgreich geändert."
+
+msgid "Something went wrong. Please try again later"
+msgstr "Bei Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+
+msgid "The two passwords are not matching"
+msgstr "Die beiden Passworte sind nicht identisch."
+
+msgid "There is already a user with this e-mail"
+msgstr "Diese E-Mailadresse ist schon registriert"
+
+msgid "Some strange error occured while trying to execute your request. Please try again later"
+msgstr "Bei Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+
+msgid "Change settings"
+msgstr "Einstellungen ändern"
+
+msgid "Last name:"
+msgstr "Nachname:"
+
+msgid "E-mail address:"
+msgstr "E-mail Adresse:"
+
+msgid "Login Information"
+msgstr "Benutzername"
+
+msgid "DAT Credentials"
+msgstr "DAT Zugangsdaten"
+
+msgid "Settings Cardetective"
+msgstr "Einstellungen Cardetektiv"
+
+msgid "DAT Customer number:"
+msgstr "DAT Kuddennummer:"
+
+msgid "DAT Username:"
+msgstr "DAT Username:"
+
+msgid "DAT PW:"
+msgstr "DAT PW:"
+
+msgid "Identical advertisements are filtered out using the following settings."
+msgstr "Anhand folgender Einstellungen werden identische Anzeigen herausgefiltert."
+
+msgid "E-mail address:"
+msgstr "E-Mail Adresse:"
+
+msgid "DAT Credentials are successfully saved"
+msgstr "DAT-Anmeldeinformationen werden erfolgreich gespeichert"
+
+msgid "Profile is sucessfully saved"
+msgstr "Profil erfolgreich gespeichert"
+
+msgid "Password is successfully changed!"
+msgstr "Passwort erfolgreich geändert!"
+
+msgid "Vehicle types"
+msgstr "Fahrzeugtypen"
+
+msgid "KW/HP"
+msgstr "KW/PS"
+
+msgid "Price diff"
+msgstr "Diff vom Ø Preis"
+
+msgid "Role:"
+msgstr "Rolle:"
+
+msgid "Congratulations you have registered successfully. Please let us process your registration."
+msgstr "Sie haben sich erfolgreich angemeldet. Ihre Anmeldedaten werden geprüft, anschließend erhalten sie eine Bestätigungsnachricht per E-Mail."
+
+msgid "There was a problem while saving properties. Please try again"
+msgstr "Beim Speichern gab es ein Problem. Bitte versuchen Sie es erneut."
+
+msgid "Some error occurred while saving DAT Credentials"
+msgstr "Beim Speichern Ihrer DAT Daten gab es ein Problem. Bitte versuchen Sie es erneut."
+
+msgid "There was a problem while saving service providers. Please try again"
+msgstr "Beim Speichern der Börsen gab es ein Problem. Bitte versuchen Sie es erneut."
+
+msgid "Service providers are successfully updated"
+msgstr "Die Liste der Börsen wurde aktualisiert."
+
+msgid "There was a problem while saving profile. Please try again"
+msgstr "Beim Speichern Ihrer Profildaten gab es ein Problem. Bitte versuchen Sie es erneut."
+
+msgid "Some error occurred while changing your password. Please try again!"
+msgstr "Beim Ändern des Passworts ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+
+msgid "It seems the passwords are not the same"
+msgstr "Die Passworte sind nicht identisch."
+
+msgid "dealer"
+msgstr "Händler"
+
+msgid "expert"
+msgstr "Sachverständiger"
+
+msgid "Supplied Silverdat credentials are wrong"
+msgstr "Die Benutzerinformationen für Silverdat sind fehlerhaft."
+
+msgid "Failed while requesting vehicle data from Silverdat!"
+msgstr "Bei der Anfrage an Silverdat ist ein Fehler aufgetreten."
+
+msgid "Failed while trying to search vehicle by VIN!"
+msgstr "Bei der VIN Abfrage ist ein Fehler aufgetreten."
+
+msgid "The vin number is invalid"
+msgstr "Die VIN Nummer ist nicht gültig."
+
+msgid "The first registration year is invalid"
+msgstr "Das Jahr der Erstzulassung ist nicht gültig"
+
+msgid "vatable"
+msgstr "Mwst."
+
+msgid "Result Count:"
+msgstr "Anzahl Treffer:"
+
+msgid "No problem! Here you can request a link to change your password."
+msgstr "Kein Problem! Hier können Sie einen Link zum Ändern Ihres Passwortes anfordern."
+
+msgid "Clear equipments"
+msgstr "Ausstattung zurücksetzten"
+
+msgid "Climatisation"
+msgstr "Klimatisierung"
+
+msgid "No climatisation"
+msgstr "Keine Klimatisierung"
+
+msgid "Climatisation:"
+msgstr "Klimatisierung:"
+
+msgid "Car type"
+msgstr "Aufbau"
+
+msgid "Germany"
+msgstr "Deutschland"
+
+msgid "Country"
+msgstr "Land"
+
+msgid "Country:"
+msgstr "Land:"
+
+msgid "Interior Type"
+msgstr "Innenausstattung"
+
+msgid "Interior Color"
+msgstr "Polsterfarbe"
+
+msgid "Interior Type:"
+msgstr "Innenausstattung:"
+
+msgid "Interior Color:"
+msgstr "Polsterfarbe:"
+
+msgid "Browse"
+msgstr "Umkreissuche"
+
+msgid "Car Type:"
+msgstr "Aufbau:"
+
+msgid "Equipment:"
+msgstr "Ausstattung:"
+
+msgid "KW/HP from"
+msgstr "KW/PS von"
+
+msgid "KW/HP to"
+msgstr "KW/PS bis"
+
+msgid "Remember me"
+msgstr "Eingeloggt bleiben"
+
+msgid "Vatable:"
+msgstr "MwSt. ausweisbar:"
+
+msgid "Vatable"
+msgstr "MwSt. ausweisbar"
+
+msgid "Non vatable"
+msgstr "MwSt. nicht ausweisbar"
+
+msgid "of"
+msgstr "von"
+
+msgid "Sorry for the inconvenience, but we are unable to export empty selection. Please select the desired vehicles to export."
+msgstr "Es sind keine Fahrzeuge markiert. Bitte wählen Sie die gewünschten Fahrzeuge für den PDF Export aus (Haken setzen)."
+
+msgid "Sorry for the inconvenience, but we are unable to export deleted vehicles. Please select vehicles that are not deleted."
+msgstr "Tut uns leid, gelöscht Fahrzeuge können nicht exportiert werden. Bitte wählen Fahrzeugen, die nicht gelöscht wurden."
+
+msgid "Page size configuration"
+msgstr "Seitengröße Konfigurations"
+
+msgid "Result configuration"
+msgstr "Ergebnis-Konfiguration"
+
+msgid "filtered"
+msgstr "Gefiltert"
+
+msgid "Parking Help"
+msgstr "Einparkhilfe"
+
+msgid "Parking Help:"
+msgstr "Einparkhilfe:"
+
+msgid "Duplicate properties are successfully updated."
+msgstr "Ihre Änderungen wurden übernommen."
+
+msgid "Cloth"
+msgstr "Stoff"
+
+msgid "Leather"
+msgstr "Vollleder"
+
+msgid "Partial leather"
+msgstr "Teilleder"
+
+msgid "There was a problem while saving properties. Please try again."
+msgstr "Beim Speichern Ihrer Eigenschaften gab es ein Problem. Bitte versuchen Sie es erneut."
+
+msgid "Result page size is successfully saved."
+msgstr "Ihre Änderungen wurden übernommen."
+
+msgid "There was a problem while saving page size configuration. Please try again."
+msgstr "Beim Speichern Ihrer Seitengröße Konfiguration gab es ein Problem. Bitte versuchen Sie es erneut."
+
+msgid "Front"
+msgstr "Vorne"
+
+msgid "Netherlands"
+msgstr "Niederlande"
+
+msgid "Belgium"
+msgstr "Belgien"
+
+msgid "Austria"
+msgstr "Österreich"
+
+msgid "Switzerland"
+msgstr "Schweiz"
+
+msgid "France"
+msgstr "Frankreich"
+
+msgid "Denmark"
+msgstr "Dänemark"
+
+msgid "Sweden"
+msgstr "Schweden"
+
+msgid "Luxembourg"
+msgstr "Luxemburg"
+
+msgid "My Parking"
+msgstr "Mein Parkplatz"
+
+msgid "Park"
+msgstr "Parken"
+
+msgid "Stores"
+msgstr "Filialen"
+
+msgid "Groups"
+msgstr "Gruppen"
+
+msgid "is added"
+msgstr "wurde zu ihrem"
+
+msgid "to parking"
+msgstr "parkplatz hinzugefügt"
+
+msgid "The car is already parked"
+msgstr "Das Fahrzeug ist schon geparkt."
+
+msgid "Your search was saved"
+msgstr "Ihre suche wurde Gespeichert"
+
+msgid "Failed to save car in parking. Please try again later."
+msgstr "Fehler beim Speichern des Fahrzeugs. Bitte versuchen Sie es zu einem späteren Zeitpunkt."
+
+msgid "Please fill in at least Maker and model for storing the search!"
+msgstr "zum Speichern der Suche bitte mindestens Marke und Modell ausfüllen!"
+
+msgid "You can add remark to your search if you wish:"
+msgstr "Titel der Suche:"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Remark"
+msgstr "Bemerkung"
+
+msgid "Saved searches"
+msgstr "Gespeicherte Suchanfragen"
+
+msgid "My Autohouse"
+msgstr "mein Autohaus"
+
+msgid "My Group"
+msgstr "Eigenne Gruppe"
+
+msgid "My Branch"
+msgstr "meine Filiale"
+
+msgid "My Competitor"
+msgstr "meine Mitbewerber"
+
+msgid "There are no saved searches"
+msgstr "Es sind keine Suchen gespeichert."
+
+msgid "T3 Other"
+msgstr "T3 Andere"
+
+msgid "T4 Other"
+msgstr "T4 Andere"
+
+msgid "T5 Other"
+msgstr "T5 Andere"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Had accident"
+msgstr "Unfallwagen"
+
+msgid "Accident free"
+msgstr "Unfallfrei"
+
+msgid "KM"
+msgstr "KM"
+
+msgid "FRY"
+msgstr "EZ"
+
+msgid "Tel:"
+msgstr "Tel:"
+
+msgid "2nd Active Tourer"
+msgstr "2er Active Tourer"
+
+msgid "2nd Gran Tourer"
+msgstr "2er Gran Tourer"
+
+msgid "Industry:"
+msgstr "Branche:"
+
+msgid "Where did you hear about us?"
+msgstr "Wie sind Sie auf uns aufmerksam geworden?"
+
+msgid "New Registration"
+msgstr "Neu Anmelden"
+
+msgid "New in Cardetektiv"
+msgstr "Neu bei Cardetektiv"
+
+msgid "Register now. It's quick and easy!"
+msgstr "Jetzt anmelden. Das geht schnell und einfach!"
+
+msgid "Metrics"
+msgstr "Kennzahlen"
+
+msgid "EK"
+msgstr "EK"
+
+msgid "VK"
+msgstr "VK"
+
+msgid "min"
+msgstr "min"
+
+msgid "max"
+msgstr "max"
+
+msgid " above market price"
+msgstr " über Marktpreis"
+
+msgid " below market price"
+msgstr " unter Marktpreis"
+
+msgid "Market price"
+msgstr "Marktpreis"
+
+msgid "Show more"
+msgstr "Mehr anzeigen"
+
+msgid "Show less"
+msgstr "weniger anzeigen"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Sorry for the inconvenience but there was an error in some of the providers and we cannot finish your request. Please try again later."
+msgstr "Es tut uns leid, aber es ist ein Fehler aufgetreten. Bei einigen der Anbieter kann Ihre Anfrage nicht beendet werden. Bitte versuchen Sie es später noch einmal."
+
+msgid "Password should be at least 8 characters."
+msgstr "Passwort sollte mindestens 8 Zeichen lang sein."
+
+msgid "Password should contain at least one lower and upper case letters."
+msgstr "Passwort sollte mindestens ein Groß- und Kleinbuchstaben enthalten."
+
+msgid "Password should contain at least one digit."
+msgstr "Passwort sollte mindestens eine Ziffer enthalten."
+
+msgid "VAT reportable"
+msgstr "MwSt. ausweisbar"
+
+msgid "Public price"
+msgstr "Verkaufspreis"
+
+msgid "Dealer price"
+msgstr "Händlerpreis"
+
+msgid "Images"
+msgstr "Bilder"
+
+msgid "Alloy wheels"
+msgstr "Leichtmetallfelgen"
+
+msgid "MP3 Interface"
+msgstr "MP3-Schnittstelle"
+
+msgid "Electric seat adjustment"
+msgstr "Elektr. Sitzeinstellung"
+
+msgid "Searchmask"
+msgstr "Suchmaske"
+
+msgid "Result list"
+msgstr "Ergebnisliste"
+
+msgid "Your password has expired. We have sent you an e-mail with further information how to change your password."
+msgstr "Ihr Passwort ist aus Sicherheitsgründen abgelaufen. Wir haben Ihnen eine E-Mail mit einem Link zum ändern des Passwortes geschickt."
+
+msgid "Your account was locked due to too many invalid login attempts. We have sent you an e-mail with further information."
+msgstr "Ihr Konto wurde aufgrund zu vieler ungültiger Anmeldeversuche gesperrt. Wir haben Ihnen eine E-Mail mit weiteren Informationen gesendet."
+
+msgid "DE"
+msgstr "D"
+
+msgid "AT"
+msgstr "A"
+
+msgid "BE"
+msgstr "B"
+
+msgid "NL"
+msgstr "NL"
+
+msgid "LU"
+msgstr "L"
+
+msgid "FR"
+msgstr "F"
+
+msgid "CH"
+msgstr "CH"
+
+msgid "DK"
+msgstr "DK"
+
+msgid "SE"
+msgstr "S"
+
+msgid "Thank you for your application. In brief your account will be activated."
+msgstr "Danke für Ihre Anmeldung. In Kürze erfolgt die Aktivierung Ihres Accounts."
+
+msgid "To the login page."
+msgstr "Weiter zum Login."
+
+msgid "From Year "
+msgstr "Erstzulassung von "
+
+msgid "To Year "
+msgstr "Erstzulassung bis "
+
+msgid "Sie haben keine Fahrzeuge für den Export zu Excel markiert"
+msgstr "Sie haben keine Fahrzeuge für den Export zu Excel markiert"
+
+msgid "A/C (man.)"
+msgstr "Klimaanlage oder -automatik"
+
+msgid "No climatisation"
+msgstr "Keine Klimaanlage oder -automatik"
+
+msgid "Automatic air conditioning"
+msgstr "Klimaautomatik"

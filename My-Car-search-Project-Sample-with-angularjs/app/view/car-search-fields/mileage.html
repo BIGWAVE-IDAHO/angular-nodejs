@@ -1,0 +1,41 @@
+<span class="dropdown-label">
+	{{ 'Mileage' | translate }}
+</span>
+
+<div class="two-columns">
+	<div class="search-field" ng-class="{'filled': model.minimalMileage}">
+		<ui-select
+			ng-model="model.minimalMileage" 
+			ng-change="handleMinimalMileageChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'From' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value | localizedNumberFormatter }}
+			</ui-select-match>
+			<ui-select-choices repeat="value in dropDownOptionsArrays.MILEAGE | startsWith:'value':$select.search | orderBy: orderByNumber">
+				{{ value.value | localizedNumberFormatter}}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+
+	<div class="search-field" ng-class="{'filled': model.maximalMileage}">
+		<ui-select 
+			ng-model="model.maximalMileage" 
+			ng-change="handleMaximalMileageChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'To' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value | localizedNumberFormatter }}
+			</ui-select-match>
+			<ui-select-choices repeat="value in dropDownOptionsArrays.MILEAGE | startsWith:'value':$select.search | orderBy: orderByNumber">
+				{{ value.value | localizedNumberFormatter }}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<span class="dropdown-label">
+	{{ 'vatable' | translate }}
+</span>
+<div ng-class="{'filled': model.selectedVatableOption}">
+	<ui-select 
+		ng-model="model.selectedVatableOption" 
+		ng-change="handleSelectedVatableOptionChange()"
+		theme="select2"
+		reset-search-input="true"
+		reset-ui-select-active-index>
+		<ui-select-match 
+			placeholder="{{ 'Any' | translate }}">
+			{{ $select.selected.label | translate }}
+		</ui-select-match>
+		<ui-select-choices 
+			repeat="value in model.vatableData | startsWith:'label':$select.search:true">
+			{{ value.label | translate }}
+		</ui-select-choices>
+	</ui-select>
+</div>

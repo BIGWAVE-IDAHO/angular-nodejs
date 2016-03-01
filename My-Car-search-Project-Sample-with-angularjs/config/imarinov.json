@@ -1,0 +1,9 @@
+{
+    "APP_CONFIG" : {
+        "clientBaseUrl" : "http://192.168.10.134:8090/",
+        "serviceBaseUrl" : "http://192.168.10.134:8080/",
+        "useHttps": false
+    },
+
+    "host": "192.168.10.134" 
+}

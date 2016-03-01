@@ -1,0 +1,9 @@
+<div>
+	<div class="edit-configuration-label">{{ model ? model.label : "" | translate }}</div>
+	<div class="edit-value">
+		<span ng-click="handleEditValueClick($event)" ng-class="{'label-border': !model.value }" class="edit-configuration-value-label" ng-if="mode == 'display'">
+			{{ inputType == "password" ? ("hidden" | translate) : model ? model.value : ("empty" | translate) }}
+		</span>
+		<input ng-keypress="handleEditValueKeypress($event)" ng-blur="handleEditValueBlur()" ng-show="mode == 'edit'" type="{{ inputType }}" ng-model="model.value"/>
+	</div>
+</div>

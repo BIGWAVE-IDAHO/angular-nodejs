@@ -1,0 +1,8 @@
+<div class="grid-cell parking-button" ng-style="{'width': getColumnWidth(cell.id)}">
+	<div class="content">
+		<div class="parking-star-wrapper">
+			<div class="parking-star" ng-click="handleInlineAddToParkingButtonClick($event, row)" ng-class="{'not-parked': !row.parked, 'parked': row.parked}">
+			</div>
+		</div>
+	</div>
+</div>

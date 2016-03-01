@@ -1,0 +1,20 @@
+<div class="silverdat-settings">
+	<div class="save-data-button" ng-click="handleSaveCredentialsButtonClick()">
+		{{ 'Change settings' | translate }}
+	</div>
+
+	<div class="edit-line">
+		<div class="edit-configuration-label">{{ datCredentials.customerNumber.label | translate }}</div>
+		<input ng-model="datCredentials.customerNumber.value">
+	</div>
+
+	<div class="edit-line">
+		<div class="edit-configuration-label">{{ datCredentials.username.label | translate }}</div>
+		<input ng-model="datCredentials.username.value">
+	</div>
+
+	<div class="edit-line">
+		<div class="edit-configuration-label">{{ datCredentials.password.label | translate }}</div>
+		<input ng-model="datCredentials.password.value" type="password">
+	</div>
+</div>

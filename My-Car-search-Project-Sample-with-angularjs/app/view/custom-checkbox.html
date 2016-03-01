@@ -1,0 +1,11 @@
+<div class="custom-checkbox">
+	<div class="checkbox-image" 
+		ng-class="{'selected': optionItem.selected, 'disabled': mouseDisabled}"
+		ng-click="handleItemClick($event, optionItem)">
+	</div>
+	<span class="label" ng-class="{'clickable': labelClickable}" 
+		ng-show="optionItem.label" 
+		ng-click="labelClickable ? handleItemClick($event, optionItem) : ''">
+		{{ optionItem.label | translate }}
+	</span>
+</div>

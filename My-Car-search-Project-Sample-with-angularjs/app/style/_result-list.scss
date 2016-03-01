@@ -1,0 +1,975 @@
+.result-list {
+	margin-top: 10px;
+
+	&.no-wrap {
+		white-space: nowrap;
+	}
+
+	.result-list-row {
+		margin-bottom: 10px;
+	}
+
+	.result-list-left {
+			display: inline-block;
+			vertical-align: top;
+			width: 250px;
+			position: relative;
+
+			transition: top 200ms linear 0s;
+		}
+
+	.result-list-right {
+		vertical-align: top;
+		display: inline-block;
+		width: 1360px;
+		margin-left: 18px;
+	}
+	
+	.top-menu {
+		margin-bottom: 10px;
+		height: 40px;
+		border-bottom: 1px solid #eaeaea;
+
+		.top-menu-button {
+			vertical-align: top;
+			width: 140px;
+			height: 90%;
+			border: 1px solid #eaeaea;
+			display: inline-block;
+			line-height: 36px;
+			color: grey;
+			font-size: 16px;
+			background-color: #fafafa;
+			text-align: center;
+			cursor: pointer;
+
+			&.active {
+				background-color: white;
+				height: 100%;
+				line-height: 40px;
+				border-bottom: none;
+			}
+		}
+	}
+
+	.quick-search-tabs {
+		margin-bottom: 5px;
+
+		.tab-item {
+			display: inline-block;
+		}
+	}
+
+	.metrics-container {
+		position: relative;
+
+		z-index: 1000;
+	}
+
+	.metrics {
+		border: 1px solid #BCBCBC;
+		text-align: center;
+
+		&.expanded {
+			.header-title-container {
+				border-bottom: 1px solid #BCBCBC;
+			}
+			.content {
+				display: block;
+			}
+		}
+
+		.content {
+			padding-top: 10px;
+			display: none;
+			font-size: 14px;
+			color: #222222;
+			background: #FFFFFF;
+		}
+
+		.header-title-container {
+			text-align: left;
+			cursor: pointer;
+			width: 100%;
+			height: 40px;
+			background: #FAFAFA;
+			border-bottom: none;
+			color: black;
+			&:hover {
+				color: #1A7BA9;
+				.title {
+					text-decoration: underline;
+				}
+			}	
+
+			.title {
+				line-height: 40px;
+				display: inline-block;
+				font-size: 14px;
+				margin-left: 11px;
+			}
+
+			.expand-button-icon {
+				.expand-icon {
+					margin-top: 11px;
+					margin-right: 11px;
+					@include icons-sprite(my-search-expand-button-blue-icon);
+					width: icons-sprite-width(my-search-expand-button-blue-icon);
+					height: icons-sprite-height(my-search-expand-button-blue-icon);
+					display: inline-block;
+				}
+				
+				display: inline-block;
+				float: right;
+			}
+		}
+
+		.metrics-row {
+			clear: both;
+			.title-container {
+				border-bottom: 1px solid #BCBCBC;
+				margin-bottom: 10px;
+				margin-top: 10px;
+				.title {
+					background: #EAEAEA;
+					margin-left: 80px;
+					margin-right: 80px;
+					font-weight: bold;
+					line-height: 22px;
+				}
+			}
+
+			.left-value, .right-value {
+				display: inline-block;
+			}
+
+			.left-value {
+				float: left;
+				margin-left: 10px;
+			}
+
+			.right-value {
+				float: right;
+				margin-right: 10px
+			}
+
+		}
+
+		.average-price {
+			clear: both;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.vehicle-price-evaluation {
+			color: #FFFFFF;
+			background: #44C95C;
+			padding: 10px;
+			font-weight: bold;
+			&.above {
+				background: #FF0000;
+			}
+		}
+	}
+
+	.tree-component-root {
+		position: relative;
+		margin-top: 20px;
+
+		.menu-item {
+			&.first {
+				.content {
+					border-top: 1px solid #BCBCBC;
+				}
+			}
+
+			&.last {
+				.content {
+					border-bottom: 1px solid #BCBCBC;
+				}
+			}
+
+			position: relative;
+			
+			.tree-node {
+				width: 250px;
+
+				cursor: pointer;
+				&.expandable {
+					
+					.content {
+						background: #FFFFFF;
+						margin-bottom: 0px;
+
+						.expand-button-icon {
+							.expand-icon {
+								@include icons-sprite(expandable-icon);
+								width: icons-sprite-width(expandable-icon);
+								height: icons-sprite-height(expandable-icon);
+							}
+						
+						}
+					}
+					
+				}
+
+				.content {
+					background: #FFFFFF;
+					border-left: 1px solid #BCBCBC;
+					border-right: 1px solid #BCBCBC;
+					width: 100%;
+					height: 40px;
+
+					&:hover {
+						.tree-node-title {
+							color: #1A7BA9;
+							text-decoration: underline;
+						}
+						
+					}
+
+					.icon,
+					.expand-icon {
+						display: inline-block;
+						vertical-align: middle;
+						margin-left: 10px;
+					}
+
+					.expand-button-icon {				
+						display: inline-block;
+						float: right;
+					}
+					
+					.tree-node-title {
+						display: inline-block;
+						margin-left: 10px;
+						line-height: 40px;
+						font-size: 12px;
+						color: black;
+					}
+
+					&.my-search {
+						background: #FAFAFA;
+
+						.tree-node-title {
+							font-size: 14px;
+							margin-left: 0px;
+						}
+
+						.expand-button-icon {
+							.expand-icon {
+								margin-right: 11px;
+								margin-top: 11px;
+								@include icons-sprite(my-search-expand-button-blue-icon);
+								width: icons-sprite-width(my-search-expand-button-blue-icon);
+								height: icons-sprite-height(my-search-expand-button-blue-icon);
+							}
+						}
+					}
+
+					&.edit-search {
+						.icon {
+							@include icons-sprite(tools-icon);
+							width: icons-sprite-width(tools-icon);
+							height: icons-sprite-height(tools-icon);
+						}
+					}
+
+					&.save-search {
+						.icon {
+							@include icons-sprite(save-search-icon);
+							width: icons-sprite-width(save-search-icon);
+							height: icons-sprite-height(save-search-icon);
+						}
+					}
+
+					&.new-search {
+						.icon {
+							@include icons-sprite(new-search-icon);
+							width: icons-sprite-width(new-search-icon);
+							height: icons-sprite-height(new-search-icon);
+						}
+					}
+
+					&.cancel-search {
+						.icon {
+							@include icons-sprite(cancel-search-icon);
+							width: icons-sprite-width(cancel-search-icon);
+							height: icons-sprite-height(cancel-search-icon);
+						}
+					}
+
+					&.load-search {
+						.icon {
+							@include icons-sprite(load-search-icon);
+							width: icons-sprite-width(load-search-icon);
+							height: icons-sprite-height(load-search-icon);
+						}
+					}
+
+					&.pdf-export {
+						border-bottom: 1px solid #BCBCBC;
+						.icon {
+							@include icons-sprite(pdf-export-icon);
+							width: icons-sprite-width(pdf-export-icon);
+							height: icons-sprite-height(pdf-export-icon);
+						}
+					}
+
+					&.excel-export {
+						border-bottom: 1px solid #BCBCBC;
+						.icon {
+							@include icons-sprite(excel-export-icon);
+							width: icons-sprite-width(excel-export-icon);
+							height: icons-sprite-height(excel-export-icon);
+						}
+						
+					}
+				}
+				
+			}
+
+		}
+		.sub-list-container {
+
+			position: relative;
+			margin-top: -1px;
+			.sub-items {
+				display: none;
+
+				&.expanded {
+					display: block;
+				}
+			}
+
+			&.pdf-export-list {
+			 	.sub-items {
+					position: absolute;
+					top: -40px;
+					left: 100%;
+			 	}
+			}
+		}
+	}
+}
+
+.filters-container {
+	margin-top: 20px;
+	border: 1px solid #BCBCBC;
+	background: #FFFFFF;
+	width: 250px;
+	.filters-list {
+		border-top: 1px solid #BCBCBC;
+		&.collapsed {
+			height: 0px;
+			overflow: hidden;
+			border-top: none;
+		}
+	}
+	
+	.select2-container {
+		input {
+			box-shadow: none;
+		}
+		.select2-choice {
+			box-shadow: 0 0 3px #cccccc inset;
+			.select2-chosen {
+				color: #5E5E5E;
+			}
+		}
+	}
+
+	::-webkit-input-placeholder {
+		color: black;
+		opacity: 1;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+		color: black;
+		opacity: 1;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+		color: black;
+		opacity: 1;
+	}
+
+	:-ms-input-placeholder {  
+		color: black;
+		opacity: 1;
+	}
+
+	.title-container {
+		cursor: pointer;
+		width: 100%;
+		height: 40px;
+		background: #FAFAFA;
+		color: black;
+
+		&:hover {
+			color: #1A7BA9;
+			.title {
+				text-decoration: underline;
+			}
+		}	
+
+		.title {
+			line-height: 40px;
+			display: inline-block;
+			font-size: 14px;
+			margin-left: 11px;
+		}
+
+		.expand-button-icon {
+			.expand-icon {
+				margin-top: 11px;
+				margin-right: 11px;
+				@include icons-sprite(my-search-expand-button-blue-icon);
+				width: icons-sprite-width(my-search-expand-button-blue-icon);
+				height: icons-sprite-height(my-search-expand-button-blue-icon);
+				display: inline-block;
+			}
+			
+			display: inline-block;
+			float: right;
+		}
+	}
+
+	.filter-row {
+		margin-left: 27px;
+		width: 250px;
+		margin-bottom: 15px;
+		&.clear-button-container {
+			margin-bottom: 0px;
+		}
+
+		.whole-row {
+			width: 200px;
+		}
+
+		.half-row {
+			display: inline-block;
+			width: 94px;
+			margin-right: 10px;
+		}
+
+		.select2-container {
+			input {
+				box-shadow: none;
+			}
+		}
+		input {
+			height: 34px;
+			color: #5E5E5E;
+			width: 100%;
+			box-sizing: border-box;
+			border: 1px solid #DADADA;
+			padding-left: 3px;
+			box-shadow: 0 0 5px #cccccc inset;
+
+			&.filled {
+				border: 1px solid #1F96CF;
+			}
+		}
+
+		.filter-button {
+			font-weight: bold;
+			cursor: pointer;
+			display: inline-block;
+			height: 40px;
+			.icon {
+				@include icons-sprite(new-search-icon);
+				width: icons-sprite-width(new-search-icon);
+				height: icons-sprite-height(new-search-icon);
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.label {
+				display: inline-block;
+				line-height: 40px;
+			}
+		}
+	}
+
+}
+	
+.grid-result {
+
+	.label {
+		display: block;
+		text-align: right;
+		color: #99CCCC;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.button {
+		display: inline-block;
+		margin-right: 5px;
+		margin-left: 5px;
+		border: 1px solid #e4e4e4;
+
+		&.grid {
+			width: icons-sprite-width(grid-icon);
+			height: icons-sprite-height(grid-icon);
+			@include icons-sprite(grid-icon);
+		}
+
+		&.list {
+			width: icons-sprite-width(grid-icon);
+			height: icons-sprite-height(grid-icon);
+			@include icons-sprite(list-icon);
+		}
+
+		&.active-grid-result-button {
+			border: 1px solid #999999;
+		}
+	}
+
+	.paging {
+		float: left;
+		color: #1A6088;
+		line-height: 34px;
+		
+		.buttons {
+			font-weight: bold; 
+			margin-right: 10px;
+			margin-left: 10px;
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	.grid-header {
+		height: 46px;
+		background-color: #1A7BA9;
+
+		.select-all {
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		
+		.sortable {
+			display: inline-block;
+			visibility: hidden;
+			width: icons-sprite-width(sortable);
+			height: icons-sprite-height(sortable);
+			@include icons-sprite(sortable);
+			cursor: pointer;
+			vertical-align: text-bottom;
+
+			&.desc {
+				visibility: visible;
+				@include icons-sprite(sortable_down);
+				width: icons-sprite-width(sortable_down);
+				height: icons-sprite-height(sortable_down);
+			}
+
+			&.asc {
+				visibility: visible;
+				@include icons-sprite(sortable_up);
+				width: icons-sprite-width(sortable_up);
+				height: icons-sprite-height(sortable_up);
+			}
+		}
+		
+		.grid-header-title {
+			display: inline-block;
+			text-align: center;
+			padding-top: 15px;
+			vertical-align: middle;
+			font-weight: bold;
+			font-size: 11px;
+			border-right: 1px solid #116C97;
+			border-bottom: 1px solid #116C97;
+			background: #1A7BA9;
+			text-transform: uppercase;
+			color: #FFFFFF;
+			width: 100px;
+			height: 100%;
+			box-sizing: border-box;
+			float: left;
+			white-space: normal;
+			word-wrap: none;
+			text-overflow: ellipsis;
+			overflow: hidden;
+
+			&.row-number-header-cell {
+				width: 22px;
+				border-top-left-radius: 4px;
+				border-right: none;
+			}
+
+			&:hover {
+				.sortable {
+					visibility: visible;
+					width: icons-sprite-width(sortable);
+					height: icons-sprite-height(sortable);
+					@include icons-sprite(sortable);
+				}
+			}
+
+			&.select-row-cell {
+			}
+
+			&.providers-cell {
+			}
+
+			&.make-cell {
+			}
+
+			&.model-cell {
+			}
+
+			&.image-cell {
+			}
+
+			&.first-registration-year-cell {
+			}
+
+			&.mileage-cell {
+			}
+
+			&.fuel-cell {
+			}
+
+			&.price-cell {
+				
+			}
+
+			&.price-difference-cell {
+			}
+
+			&.dealer-price-cell {
+			}
+
+			&.status-cell {
+			}
+
+			&.color-cell {
+				border-top-right-radius: 4px;
+			}
+
+			&.ad-life-cell {
+			}
+
+			&.zipcode-cell {
+			}
+
+			&.power-cell {
+			}
+
+			&.version-cell {
+
+				&.dealer {
+				}
+			}
+		}
+	}
+	.grid-row-wrapper {
+		height: 50px;
+
+		&:hover {
+			.parking-star {
+				visibility: visible !important;
+			}
+		}
+
+		.parking-star-wrapper {
+			display: inline-block;
+			height: 11px;
+		}
+
+		.parking-star {
+			cursor: pointer;
+			@include icons-sprite(parking-star-small);
+			width: icons-sprite-width(parking-star-small);
+			height: icons-sprite-height(parking-star-small);
+
+			&.parked {
+				visibility: visible;
+			}
+
+			&.not-parked {
+				visibility: hidden;
+				@include icons-sprite(parking-star-grey-small);
+				width: icons-sprite-width(parking-star-grey-small);
+				height: icons-sprite-height(parking-star-grey-small);
+			}
+		}
+
+		.row-number {
+			box-sizing: border-box;
+			display: inline-block;
+			height: 100%;
+			line-height: 60px;
+			display: inline-block;
+			float: left;
+			width: 22px;
+			text-align: center;
+			border-bottom: 1px solid #FFFFFF;
+			box-shadow: 0px 1px 0px 0px #C4C4C4;
+		}
+
+		&.last-row {
+			.grid-cell {
+				&.price {
+				}
+			}
+		}
+
+		.list-row {
+			height: 100%;
+			color: #5E5E5E;
+			&.even {
+				background: #EFEFEF;
+			}
+
+			&.odd {
+				background: #E5E5E5;
+			}
+
+			&.selected {
+				background: #D0D0D0;
+				color: #000000;
+			}
+			.row-view {
+				height: 100%;
+
+				&.new-ad {
+					background: orange;
+				}
+			}
+		}
+		.grid-cell {
+			width: 100px;
+			display: inline-block;
+			text-align: center;
+			box-sizing: border-box;
+			float: left;
+			height: 100%;
+			border-right: 1px solid #FFFFFF;
+			border-bottom: 1px solid #FFFFFF;
+			box-shadow: 1px 1px 0px 0px #C4C4C4;
+			overflow: hidden;
+			white-space: normal;
+
+
+			.small-icon {
+				width: 35px;
+				height: 25px;
+				vertical-align: middle;
+			}
+
+			.content {
+				display: inline-block;
+				margin-top: 15px;
+				vertical-align: middle;
+
+				&.striked-through {
+					position: relative;
+					hr {
+						border-color: red;
+						position: absolute;
+						top: 0;
+						width: 100%;
+					}
+				}
+ 			}
+
+			&.checkbox {
+				.content {
+					margin-top: 20px;
+				}
+			}
+
+			&.parking-button {
+				.content {
+					margin-top: 20px;
+				}
+			}
+
+			&.image {
+				.new-vehicle-icon {
+					margin-left: auto;
+					margin-right: auto;
+					@include icons-sprite(new-icon);
+					width: icons-sprite-width(new-icon);
+					height: icons-sprite-height(new-icon);
+				}
+
+				.content {
+					margin-top: 0;
+					line-height: 30px;
+				}
+			}
+
+			&.make {
+			}
+
+			&.providers {
+			}
+
+			&.model {
+			}
+
+			&.mileage {
+			}
+
+			&.version {
+				overflow: hidden; 
+				text-align: left;
+
+				.content {
+					margin-left: 5px;
+				}
+
+				&.dealer {
+				}
+			}
+
+			&.first-registration-year {
+			}
+
+			&.price {
+				font-weight: bold;
+			}
+
+			&.price-difference {
+			}
+
+			&.fuel {
+			}
+
+			&.dealer-price {
+			}
+
+			&.status {
+				.content {
+					margin-top: 5px;
+				}
+			}
+
+			&.color {
+			}
+
+			&.ad-life {
+				font-weight: bold;
+
+				&.age-new {
+					color: green;
+				}
+
+				&.age-average {
+					color: #f2c513;
+				}
+
+				&.age-old {
+					color: red;
+				}
+			}
+
+			&.power {
+			}
+
+			&.zipcode {
+			}
+		}
+
+		.panel-delimiter-line {
+			margin: 6px;			
+		}
+	}
+}
+
+.overall-statistics-report {
+	background: #C1C1C1;
+	color: #252525;
+	height: 34px;
+	border-top: 1px solid #CDCDCD;
+	margin-top: 1px;
+
+	.overall-statistics-wrapper {
+		float: right;
+	}
+
+	.item {
+		font-size: 14px;
+		border-right: 1px solid #FEFEFE;
+		box-shadow: 1px 0px 0px #A3A3A3;
+		padding-left: 5px;
+		padding-right: 5px;
+		line-height: 34px;
+		display: inline-block;
+
+		&.average-price {
+			background: #919191;
+		}
+	}
+
+}
+.ad-provider-icon-holder {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin-top: -10px;
+	margin-left: 2px;
+	
+	.ad-provider-small-icon {
+		width: 12px;
+		height: 12px;
+		&.mobile-de-logo {
+			@include icons-sprite(mobile-de-tiny-icon);
+			width: icons-sprite-width(mobile-de-tiny-icon);
+			height: icons-sprite-height(mobile-de-tiny-icon);
+		}
+
+		&.autoscout-logo {
+			@include icons-sprite(autoscout-tiny-icon);
+			width: icons-sprite-width(autoscout-tiny-icon);
+			height: icons-sprite-height(autoscout-tiny-icon);
+		}
+
+		&.pkw-logo {
+			@include icons-sprite(pkw-tiny-icon);
+			width: icons-sprite-width(pkw-tiny-icon);
+			height: icons-sprite-height(pkw-tiny-icon);
+		}
+	}
+}
+
+.big-showing-image {
+	position: absolute;
+	display: none;
+	z-index: 1000000;
+}
+
+.small-hovering-image:hover {
+	.big-showing-image {
+		position: absolute;
+		display: block;
+	}
+}
+
+.loading {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url('/image/ajax-loading.png');
+}
+
+.striked-through {
+	position: relative;
+	hr {
+		border-color: black;
+		position: absolute;
+		top: 30%;
+		width: 100%;
+	}
+}

@@ -1,0 +1,75 @@
+<section class="container car-search-section section cardetective-select2-theme" ng-class="{'result-view': resultListVisible}">
+
+	<div class="car-search-container" 
+		ng-class="{'component-invisible': resultListVisible}"
+		car-search-component car-search-controller-configuration>
+	</div>
+	
+
+	<div class="result-list noselect" ng-if="resultListVisible">
+
+		<div class="result-list-row">
+			<div class="result-list-left" keep-between="{top: 50, bottom: 50}">
+
+				<div result-metrics class="metrics-container">
+				</div>
+				<div tree-component items-configuration="menuData">
+				</div>
+
+				<div class="filters-container" car-list-filter-panel>
+				</div>
+			</div>
+
+			<div class="result-list-right">
+				<div class="top-menu">
+					<div class="top-menu-button" ng-click="handleEditSearchButtonClick()" ng-class="{'active': !resultListVisible}">
+						{{ 'Searchmask' | translate }}
+					</div>
+
+					<div class="top-menu-button" ng-class="{'active': resultListVisible}">
+						{{ 'Result list' | translate }}
+					</div>
+
+					<div class="top-menu-button" permission-evaluator ng-if="hasRole('DEALER')">
+						{{ 'My Inventory' | translate }}
+					</div>
+
+					<div class="top-menu-button" permission-evaluator ng-if="hasRole('DEALER')">
+						{{ 'Stores' | translate }}
+					</div>
+
+					<div class="top-menu-button" permission-evaluator ng-if="hasRole('DEALER')">
+						{{ 'Groups' | translate }}
+					</div>
+				</div>
+
+				<div removable-tabs-list-component 
+					class="quick-search-tabs"
+					tabs-model="model.searchTabs">
+
+				</div>
+
+				<div overall-statistics ng-if="isAuthenticated()">
+					<result-list 
+						result-items="searchResult" 
+						page-size="model.pageSize" 
+						filter-function="resultFilterFunction" 
+						number-of-results="numberOfResultsAutoscout + numberOfResultsMobile - duplicatesCount" 
+						selected-item="selectedAd"
+						header-title-buttons="gridHeaderTitleButtons" 
+						row-template="'view/car-row.html'" class="grid-result">
+
+					</result-list>
+					
+					<div ng-include="'/view/overall-search-result-statistics.html'">
+					</div>
+					
+					<div ad-detail ad="selectedAd">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+</section>

@@ -1,0 +1,226 @@
+<div class="car-search-component noselect">
+
+	<div ng-if="!resultListVisible" class="car-search-left" 
+		vertical-scroll-offset="50"
+		horizontal-scroll-offset="0"
+		ng-class="{'vertical-offset': verticalOffssetLimitReached}">
+
+		<div class="search-button-container"
+			ng-click="handleSearchButtonClick($event)">
+			<div class="search-button-label-container">
+				<div class="search-button-label label" >
+					{{ 'Search' | translate }}
+				</div>
+				<div class="search-count-label label">
+					{{ model.estimatedResultCount | localizedNumberFormatter }}
+				</div>
+			</div>
+			<div class="icon">
+
+			</div>
+		</div>
+
+		<div class="load-search-button-container button-container">
+			<div class="button load-search" 
+				ng-click="handleLoadSearchButtonClick()">
+				<div class="icon">
+				</div>
+				<div class="label">
+					{{ 'Load Search' | translate}}
+				</div>
+
+			</div>
+		</div>
+
+		<div class="clear-search-form-button-container button-container">
+			<div class="button" 
+				ng-click="handleClearSearchParametersButtonClick($event)">
+				<div class="icon">
+				</div>
+				<div class="label">
+					{{ 'Clear searchform' | translate}}
+				</div>
+
+			</div>
+		</div>
+
+		<div class="clear-features-button-container button-container">
+			<div class="button" 
+				ng-click="handleClearFeaturesButtonClick($event)">
+				<div class="icon">
+				</div>
+				<div class="label">
+					{{ 'Clear equipments' | translate}}
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="car-search-right">
+
+		<div class="search-parameters-container container-inline">
+			<div class="header general">
+				<div class="title-icon">
+				</div>
+				<div class="title ">
+					{{ 'Car Search' | translate }}
+				</div>
+			</div>
+
+			<div class="content">
+				<div class="car-search-vin">
+					<div class="car-search-input-wrapper">
+						<input class="car-search-input vin" type="text" 
+							ng-model="model.vincode" 
+							ng-keyup="handleVinInputKeyPress($event)" 
+							placeholder="{{ 'VIN' | translate }}" />
+						<div class="tooltip-container" 
+							popover-title="This is VIN Number"
+							popover-placement="right"
+							popover="{{ 'A vehicle identification number, commonly abbreviated to VIN, is a unique code including a serial number, used by the automotive industry to identify individual motor vehicles, towed vehicles, motorcycles, scooters and mopeds as defined in ISO 3833.' | translate }}"
+							popover-append-to-body="false"
+							popover-trigger="mouseenter">
+
+						</div>
+					</div>
+				</div>
+
+				<div class="car-search-vin first-registration-year">
+					<div class="car-search-input-wrapper">
+						<input class="car-search-input first-registration-year" type="text" 
+							ng-model="model.firstRegistrationYear" ng-keyup="handleVinInputKeyPress($event)"
+							placeholder="{{ 'EZ' | translate }}" />
+					</div>
+				</div>
+
+				<div class="car-search-vin mileage">
+					<div class="car-search-input-wrapper">
+						<input class="car-search-input mileage" type="text" 
+							ng-model="model.vinSearchMileage" 
+							ng-keyup="handleVinInputKeyPress($event)"
+							placeholder="{{ 'KM Stand' | translate }}" />
+					</div>
+				</div>
+
+				<button class="vin-search-button" 
+					ng-click="handleVinSearchButtonClick()">
+					{{ 'VIN search' | translate }}
+				</button>
+
+				<div class="loading" ng-if="vinSearchLoading"></div>
+
+				<div class="search-form">
+					<div class="main-frame">
+						<div class="three-columns row biggest">
+							<div class="search-field" ng-include="'/view/car-search-fields/make.html'">
+							</div>
+
+							<div class="search-field" ng-include="'/view/car-search-fields/model.html'">
+							</div>
+
+							<div class="search-field" ng-include="'/view/car-search-fields/version.html'">
+							</div>
+						</div>
+						<div class="three-columns row biggest">
+							<div class="search-field" ng-include="'/view/car-search-fields/first-registration.html'">
+							</div>
+
+							<div class="search-field" ng-include="'/view/car-search-fields/mileage.html'">
+							</div>
+
+							<div class="search-field" ng-include="'/view/car-search-fields/power.html'">
+							</div>
+						</div>
+						<div class="three-columns row biggest">
+							<div class="two-columns search-field">
+								<div class="search-field" ng-include="'/view/car-search-fields/gearbox.html'">
+								</div>
+								<div class="search-field" ng-include="'/view/car-search-fields/fuel.html'">
+								</div>
+							</div>
+							<div class="two-columns search-field">
+								<div class="search-field" ng-include="'/view/car-search-fields/car-type.html'">
+								</div>
+
+								<div class="search-field" ng-include="'/view/car-search-fields/doors.html'">
+								</div>
+							</div>
+							<div class="search-field" ng-include="'/view/car-search-fields/price.html'">
+							</div>
+						</div>
+						<div class="three-columns row bigger">
+							<div class="two-columns search-field">
+								<div class="search-field" ng-include="'/view/car-search-fields/climatisation.html'">
+								</div>
+
+								<div class="search-field" ng-include="'/view/car-search-fields/interior-type.html'">
+								</div>
+							</div>
+
+							<div class="two-columns search-field">
+								<div class="search-field" ng-include="'/view/car-search-fields/interior-color.html'">
+								</div>
+
+								<div class="search-field" ng-include="'/view/car-search-fields/seats.html'">
+								</div>
+							</div>
+							<div class="two-columns search-field">
+								<div class="search-field" ng-include="'/view/car-search-fields/condition.html'">
+								</div>
+
+								<div class="search-field" ng-include="'/view/car-search-fields/seller-type.html'">
+								</div>
+							</div>
+						</div>
+						<div class="three-columns row bigger">
+							<div class="two-columns search-field">
+								<div class="search-field" ng-include="'/view/car-search-fields/color.html'">
+								</div>
+
+								<div class="search-field" ng-include="'/view/car-search-fields/euro-norm.html'">
+								</div>
+							</div>
+							<div class="two-columns search-field">
+								<div class="search-field" ng-include="'/view/car-search-fields/environment-badge.html'">
+								</div>
+
+								<div class="search-field" ng-include="'/view/car-search-fields/parking-assitants.html'">
+								</div>
+							</div>
+							<div class="search-field" ng-include="'/view/car-search-fields/location.html'">
+							</div>
+						</div>
+						<div class="row bigger three-columns">
+							<div class="two-columns search-field">
+								<div class="search-field" ng-include="'/view/car-search-fields/accident-vehicles.html'">
+								</div>
+
+								<div class="search-field" ng-include="'/view/car-search-fields/vatable.html'">
+								</div>
+							</div>
+							<span class="important-features">
+								<span ng-repeat="feature in model.features | filter: {isMain: true}">
+									<span custom-checkbox option-item="feature">
+									</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div>
+					<div class="all-features">
+						<span class="features-label">
+						{{ 'Equipment' | translate }}
+						</span>
+						<div class="features-container">
+							<span ng-repeat="feature in model.features | filter: {isMain: false} | orderBy: 'value | translate'">
+								<span custom-checkbox option-item="feature">
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

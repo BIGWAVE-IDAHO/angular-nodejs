@@ -1,0 +1,7 @@
+﻿<div ng-click="handleClick($event, row)" reorder="cells" car-list-row class="row-view" ng-dblClick="handleDoubleClick($event, row)" ng-class="{'striked-through': row.deleted}">
+	
+	<span ng-repeat="cell in cells" ng-include src="cell.template" ng-if="isColumnAvaiable(cell.id)">
+	</span>
+
+	<hr ng-if="row.deleted"/>
+</div>

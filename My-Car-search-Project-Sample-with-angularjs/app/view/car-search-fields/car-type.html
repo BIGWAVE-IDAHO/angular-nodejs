@@ -1,0 +1,9 @@
+<span class="dropdown-label">
+	{{ 'Car type' | translate }}
+</span>
+
+<div multiple-selection-drop-down
+	items="model.carTypes"
+	order-criteria="['isOther', 'value | translate']"
+	placeholder="'Any' | translate">
+</div>

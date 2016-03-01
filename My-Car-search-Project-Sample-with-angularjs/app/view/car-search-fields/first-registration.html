@@ -1,0 +1,43 @@
+<span class="dropdown-label">
+	{{ 'First registration' | translate }}
+</span>
+
+<div class="two-columns">
+	<div class="search-field" ng-class="{'filled': model.minimalYear}">
+		<ui-select
+			ng-model="model.minimalYear" 
+			ng-change="handleMinimalYearChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'From' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value }}
+			</ui-select-match>
+			<ui-select-choices 
+				repeat="year in dropDownOptionsArrays['YEARS'] | startsWith:'value':$select.search | orderBy: orderByNumber:true">
+				{{ year.value }}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+
+	<div class="search-field" ng-class="{'filled': model.maximalYear}">
+		<ui-select 
+			ng-model="model.maximalYear" 
+			ng-change="handleMaximalYearChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'To' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value }}
+			</ui-select-match>
+			<ui-select-choices 
+				repeat="year in dropDownOptionsArrays['YEARS'] | startsWith:'value':$select.search | orderBy: orderByNumber:true">
+				{{ year.value }}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+</div>

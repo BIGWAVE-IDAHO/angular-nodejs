@@ -1,0 +1,208 @@
+<div class="mappings">
+	<button class="mapping" ng-click="handleMappingButtonClick($event, 'MAPPINGS')">
+		Mappings
+	</button>
+	<button class="autoscout" ng-click="handleMappingButtonClick($event, 'AUTOSCOUT')">
+		Autoscout
+	</button>
+	<button class="mobile" ng-click="handleMappingButtonClick($event, 'MOBILE')">
+		Mobile
+	</button>
+	<div class="makes" ng-show="activeView == 'MAPPINGS'">
+		<div class="mapping" ng-repeat="mapping in makesMappings">
+			<div>
+				<h1>
+					MAKES:
+				</h1>
+			</div>
+			<div class="parameter autoscout">
+				AutoScout Id:  {{ mapping.autoscoutId }}
+			</div>
+			<div class="parameter autoscout">
+				AutoScout Label:  {{ mapping.autoscoutLabel }}
+			</div>
+			<div class="parameter mobile">
+				Mobile.de Id:  {{ mapping.mobileId }}
+			</div>
+			<div class="parameter mobile">
+				Mobile.de Label:  {{ mapping.mobileLabel }}
+			</div>
+			<div class="parameter internal">
+				InternalId: {{ mapping.id }}
+			</div>
+			<div class="clear">
+			</div>
+			
+
+			<div class="models">
+				<div>
+					<h1>
+						MODELS:
+					</h1>
+				</div>
+				<div class="model" ng-repeat="model in mapping.models">
+					<div class="parameter autoscout">
+						AutoScout Id:  {{ model.autoscoutId }}
+					</div>
+					<div class="parameter autoscout">
+						AutoScout Label:  {{ model.autoscoutLabel }}
+					</div>
+					<div class="parameter mobile">
+						Mobile.de Id:  {{ model.mobileId }}
+					</div>
+					<div class="parameter mobile">
+						Mobile.de Label:  {{ model.mobileLabel }}
+					</div>
+					<div class="parameter internal">
+						InternalId: {{ model.id }}
+					</div>
+					<div class="clear">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="autoscout-rough-makes-models" ng-show="activeView =='AUTOSCOUT'">
+		<h1>
+			AUTOSCOUT:
+		</h1>
+		<div class="make" ng-repeat="make in autoscoutMakes">
+			<h1>
+				MAKE
+			</h1>
+			<div class="parameter autoscout">
+				Id: {{ make.id }}
+			</div>
+			<div class="parameter autoscout">
+				Label: {{ make.label }}
+			</div>
+			<div class="clear">
+			</div>
+			<div class="models">
+				<div>
+					<h1>
+						MODELS:
+					</h1>
+				</div>
+				<div class="model" ng-repeat="model in make.models">
+					<div class="parameter autoscout">
+						Id:  {{ model.id }}
+					</div>
+					<div class="parameter autoscout">
+						Label:  {{ model.label }}
+					</div>
+					<div class="clear">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-rough-makes-models" ng-show="activeView == 'MOBILE'">
+		<h1>
+			MOBILE:
+		</h1>
+		<div class="make" ng-repeat="make in mobileMakes">
+			<h1>
+				MAKE
+			</h1>
+			<div class="parameter mobile">
+				Id: {{ make.id }}
+			</div>
+			<div class="parameter mobile">
+				Label: {{ make.label }}
+			</div>
+			<div class="clear">
+			</div>
+			<div class="models">
+				<div>
+					<h1>
+						MODELS:
+					</h1>
+				</div>
+				<div class="model" ng-repeat="model in make.models">
+					<div class="parameter mobile">
+						Id:  {{ model.id }}
+					</div>
+					<div class="parameter mobile">
+						Label:  {{ model.label }}
+					</div>
+					<div class="clear">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div mappings-table
+		table-title="'Gearbox'"
+		autoscout-data="autoscoutLookupData.GEARBOX"
+		mobile-data="mobileLookupData.GEARBOX"
+		internal-data="GEARBOX"
+		selected-tab-id="activeView"
+		tab-id="'GEARBOX'">
+	</div>
+
+	<div mappings-table
+		table-title="'Car Type'"
+		autoscout-data="autoscoutLookupData.CAR_TYPE"
+		mobile-data="mobileLookupData.CAR_TYPE"
+		internal-data="CAR_TYPE"
+		selected-tab-id="activeView"
+		tab-id="'CAR_TYPE'">
+	</div>
+
+	<div mappings-table
+		table-title="'Fuel Type'"
+		autoscout-data="autoscoutLookupData.FUEL_TYPE"
+		mobile-data="mobileLookupData.FUEL_TYPE"
+		internal-data="FUEL_TYPE"
+		selected-tab-id="activeView"
+		tab-id="'FUEL_TYPE'">
+	</div>
+
+	<div mappings-table
+		table-title = "'Condition'"
+		autoscout-data="autoscoutLookupData.CONDITION"
+		mobile-data="mobileLookupData.CONDITION"
+		internal-data="CONDITION"
+		selected-tab-id="activeView"
+		tab-id="'CONDITION'">
+	</div>
+
+	<div mappings-table
+		table-title = "'Exterior color'"
+		autoscout-data="autoscoutLookupData.EXTERIOR_COLOR"
+		mobile-data="mobileLookupData.EXTERIOR_COLOR"
+		internal-data="EXTERIOR_COLOR"
+		selected-tab-id="activeView"
+		tab-id="'EXTERIOR_COLOR'">
+	</div>
+
+	<div mappings-table
+		table-title = "'Euro norm'"
+		autoscout-data="autoscoutLookupData.EMISSION_CLASS"
+		mobile-data="mobileLookupData.EMISSION_CLASS"
+		internal-data="EMISSION_CLASS"
+		selected-tab-id="activeView"
+		tab-id="'EMISSION_CLASS'">
+	</div>
+
+	<div mappings-table
+		table-title = "'Euvironment badge'"
+		autoscout-data="autoscoutLookupData.EMISSION_STICKER"
+		mobile-data="mobileLookupData.EMISSION_STICKER"
+		internal-data="EMISSION_STICKER"
+		selected-tab-id="activeView"
+		tab-id="'EMISSION_STICKER'">
+	</div>
+
+	<div mappings-table
+		table-title = "'Features'"
+		autoscout-data="autoscoutLookupData.FEATURES"
+		mobile-data="mobileLookupData.FEATURES"
+		internal-data="FEATURES"
+		selected-tab-id="activeView"
+		tab-id="'FEATURES'">
+	</div>
+</div>

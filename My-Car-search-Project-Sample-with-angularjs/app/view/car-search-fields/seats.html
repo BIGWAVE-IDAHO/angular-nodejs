@@ -1,0 +1,43 @@
+<span class="dropdown-label">
+		{{ 'Seats' | translate }}
+</span>
+
+<div class="two-columns">
+	<div class="search-field" ng-class="{'filled': model.minimalSeats}">
+		<ui-select 
+			ng-model="model.minimalSeats" 
+			ng-change="handleMinimalSeatsChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'From' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value }}
+			</ui-select-match>
+			<ui-select-choices 
+				repeat="value in dropDownOptionsArrays.SEATS | startsWith:'value':$select.search | orderBy: 'parseInt(key)'">
+				{{ value.value }}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+
+	<div class="search-field" ng-class="{'filled': model.maximalSeats}">
+		<ui-select 
+			ng-model="model.maximalSeats" 
+			ng-change="handleMaximalSeatsChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'To' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value }}
+			</ui-select-match>
+			<ui-select-choices 
+				repeat="value in dropDownOptionsArrays.SEATS | startsWith:'value':$select.search | orderBy: 'parseInt(key)'">
+				{{ value.value }}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+</div>

@@ -1,0 +1,92 @@
+<section class="login-section section noselect" >
+	<iframe style="display:none" id="bridgeFrame" name="bridgeFrame" src="/view/blank.html"></iframe>
+	<div class="icon-container">
+		<div class="icon">
+		</div>
+	</div>
+	<div class="non-registered-container">
+		<h2 class="title" translate>
+			New in Cardetektiv
+		</h2>
+		<div class="subtitle" translate>
+			Register now. It's quick and easy!
+		</div>
+		<button ui-sref="register" class="register-button" translate>
+			New Registration
+		</button>
+	</div>
+
+	<div class="login-container">
+		<form novalidate id="bridgeForm" name="bridgeForm" target="bridgeFrame" action="#">
+			<h2 class="title" translate>
+				Sign In
+			</h2>
+			<div translate class="input-title">
+				E-mail
+			</div>
+			<input
+				type="text"
+				ng-model="username"
+				id="username"
+				name="username"
+				ng-change="handleLoginInputChange($event)"
+				class="text-input username" />
+			<div translate class="input-title">
+				Password
+			</div>
+			<input
+				type="password"
+				name="password"
+				id="password"
+				ng-change="handleLoginInputChange($event)"
+				ng-model="password"
+				class="text-input password"/>
+
+			<div class="forgot-password-container">
+				<a ui-sref="forgotPassword" ui-sref-active="active-link" translate>
+					You forgot your password?
+				</a>
+			</div>
+			
+			<div class="locale-selector" ng-if="!isAuthenticated()">
+				<select ng-model="applicationModel.selectedLocale" 
+					ng-options = "locale.abbreviation | translate for locale in applicationModel.locales"
+					ng-change="handleLocaleChange($event)">
+				</select>
+			</div>
+			<div class="login-button-container">
+				<button
+					type="submit"
+					class="login-button"
+					ng-click="username && password ? handleSubmitButtonClick() : ''"
+					ng-disabled="!username || !password || submitted" translate>
+						Sign In
+				</button>
+
+			</div>
+		</form>
+		<div class="wrong-login" ng-show="incorrect" translate>
+			Incorrect username or password
+		</div>
+
+		<div class="wrong-login" ng-show="sessionExists" translate>
+			This user is already logged in!
+		</div>
+
+		<div class="wrong-login" ng-show="generalError" translate>
+			Some error occured
+		</div>
+		<div class="wrong-login" ng-show="passwordExpired" translate>
+			Your password has expired. We have sent you an e-mail with further information how to change your password.
+		</div>
+
+		<div class="wrong-login" ng-show="accountLocked" translate>
+			Your account was locked due to too many invalid login attempts. We have sent you an e-mail with further information.
+		</div>
+
+		<div class="wrong-login" ng-show="pendingVerification" translate>
+			Your profile still needs to be verified
+		</div>
+		
+	</div>
+</section>

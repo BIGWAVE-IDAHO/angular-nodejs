@@ -1,0 +1,19 @@
+<span class="dropdown-label">
+	{{ 'Accident Vehicles' | translate }}
+</span>
+<div ng-class="{'filled': model.accidentVehiclesInclusionData}">
+	<ui-select 
+		ng-model="model.accidentVehiclesInclusionData"
+		ng-change="handleAccidentVehicllesInclusionDataChange()"
+		theme="select2"
+		reset-ui-select-active-index>
+		<ui-select-match 
+			placeholder="{{ 'Any' | translate }}">
+			{{ $select.selected.value | translate}}
+		</ui-select-match>
+		<ui-select-choices 
+			repeat="value in dropDownOptionsArrays.ACCIDENT_VEHICLES | startsWith:'value':$select.search:true | orderBy: 'value | translate'">
+			{{ value.value | translate }}
+		</ui-select-choices>
+	</ui-select>
+</div>					

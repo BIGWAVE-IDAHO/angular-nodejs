@@ -1,0 +1,42 @@
+<div class="profile-edit">
+	<div class="save-data-button" ng-click="handleSaveProfileClick()">
+		{{ 'Change settings' | translate }}
+	</div>
+
+	<div class="edit-line">
+		<div class="edit-configuration-label">{{ profile.firstName.label | translate }}</div>
+		<input ng-model="profile.firstName.value">
+	</div>
+
+	<div class="edit-line">
+		<div class="edit-configuration-label">{{ profile.lastName.label | translate }}</div>
+		<input ng-model="profile.lastName.value">
+	</div>
+
+	<div class="edit-line">
+		<div class="edit-configuration-label">{{ profile.email.label | translate }}</div>
+		<input ng-model="profile.email.value">
+	</div>
+
+	<hr class="separator-line"/>
+
+	<div class="save-data-button password" ng-click="handleSavePasswordClick()">
+		{{ 'Change settings' | translate }}
+	</div>
+
+	<div class="edit-line">
+		<div class="edit-configuration">{{ 'Password:' | translate }}</div>
+	</div>
+
+	<div class="edit-line">
+		<div class="password-input">
+		<input placeholder="{{ 'Old Password' | translate }}" type="password" ng-model="oldPassword" />
+	</div>
+		<div class="password-input">
+		<input placeholder="{{ 'New Password' | translate }}" type="password" ng-model="newPassword" />
+	</div>
+		<div class="password-input">
+		<input placeholder="{{ 'Repeat Password' | translate }}" type="password" ng-model="repeatedPassword" />
+	</div>
+	</div>
+</div>

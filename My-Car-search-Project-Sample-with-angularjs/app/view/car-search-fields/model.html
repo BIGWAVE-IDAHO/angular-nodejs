@@ -1,0 +1,23 @@
+<span class="dropdown-label">
+	{{ 'Model' | translate }}
+</span>
+<div ng-class="{'filled': model.selectedModel}">
+	<ui-select 
+		ng-model="model.selectedModel" 
+		ng-change="handleModelChange()"
+		theme="select2"
+		reset-search-input="true"
+		reset-ui-select-active-index>
+		<ui-select-match 
+			placeholder="{{ 'Any' | translate }}" 
+			allow-clear="true">
+			{{ $select.selected.model | specialLabelsTranslator }}
+		</ui-select-match>
+		<ui-select-choices repeat="value in model.selectedCarMaker.models | orderBy: ['isOtherModel', 'model'] | modelsOrdering | startsWith:'model':$select.search:true">
+			<span ng-class="{'model-group-parent': value.isModelGroup, 'model-group-child': (value.modelGroupKey != null && !value.isModelGroup),
+							'model-other': value.modelGroupKey == null}">
+				{{ value.model | specialLabelsTranslator }}
+			</span>
+		</ui-select-choices>
+	</ui-select>
+</div>

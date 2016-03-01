@@ -1,0 +1,11 @@
+<div class="checkbox-tree-node">
+	<div custom-checkbox option-item="item">
+	</div>
+
+	<div class="suboptions" ng-if="item.items">
+		<div ng-repeat="item in item.items | orderBy : 'label | translate'">
+			<div ng-include="'view/checkbox-tree-node.html'">
+			</div>
+		</div>
+	</div>
+</div>

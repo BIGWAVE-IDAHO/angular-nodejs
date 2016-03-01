@@ -1,0 +1,79 @@
+<div class="mappings-table-container">
+	<button class="table-activation-button" 
+		ng-click="handleTableButtonClick($event)">
+		{{ tableTitle }}
+	</button>
+	<div class="mappings" ng-show="selectedTabId == tabId">
+		<button class="autoscout-button" ng-click="handleTabButtonClick($event, 'AUTOSCOUT')">
+			AUTOSCOUT
+		</button>
+		<button class="autoscout-button" ng-click="handleTabButtonClick($event, 'MOBILE')">
+			MOBILE
+		</button>
+		<button class="autoscout-button" ng-click="handleTabButtonClick($event, 'MAPPING')">
+			MAPPING
+		</button>
+
+		<div>
+			<h1>
+				{{ tableTitle }}:
+			</h1>
+		</div>
+
+		<div ng-if="activeTab == 'MAPPING'">
+
+			<div class="mapping" ng-repeat="mapping in mappings | orderBy: 'label | translate' ">
+				<div class="parameter autoscout">
+					AutoScout Id:  {{ mapping.autoscoutId }}
+				</div>
+				<div class="parameter autoscout">
+					AutoScout Label:  {{ mapping.autoscoutLabel }}
+				</div>
+				<div class="parameter mobile">
+					Mobile.de Id:  {{ mapping.mobileId }}
+				</div>
+				<div class="parameter mobile">
+					Mobile.de Label:  {{ mapping.mobileLabel }}
+				</div>
+				<div class="parameter internal">
+					InternalId: {{ mapping.id }}
+				</div>
+				<div class="parameter internal">
+					Internal Label: {{ mapping.label ? (mapping.label | translate) : '' }}
+				</div>
+				<div class="clear">
+			</div>
+		</div>
+	</div>
+
+	<div class="autoscout-rough" ng-show="activeTab =='AUTOSCOUT'">
+		<h1>
+			AUTOSCOUT:
+		</h1>
+		<div class="item" ng-repeat="item in autoscoutData">
+			<div class="parameter autoscout">
+				Id: {{ item.id }}
+			</div>
+			<div class="parameter autoscout">
+				Label: {{ item.label }}
+			</div>
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+	<div class="mobile-rough" ng-show="activeTab == 'MOBILE'">
+		<h1>
+			MOBILE:
+		</h1>
+		<div class="item" ng-repeat="item in mobileData">
+			<div class="parameter mobile">
+				Id: {{ item.id }}
+			</div>
+			<div class="parameter mobile">
+				Label: {{ item.label }}
+			</div>
+			<div class="clear">
+			</div>
+		</div>
+	</div>
+</div>

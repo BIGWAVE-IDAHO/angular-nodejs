@@ -1,0 +1,219 @@
+<div class="expanded-ad-view" ng-if="ad">
+	<div class="tabs">
+		<div ng-repeat="tabData in navigationTabsData"
+			class="tab-item" 
+			ng-class="{'selected' : selectedTabData.key == tabData.key}" 
+			ng-click="handleTabItemClick($event, tabData)">
+			
+			<div class="label">
+				{{ tabData.label | translate }}
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="left">
+			<div class="images default-big-image" ng-if="!ad.images || ad.images.length <= 0">
+			</div>
+			<div class="images" ng-if="ad.images && ad.images.length > 0">
+				
+				<div class="image-container">
+					<img class="selected-image image" ng-src="{{ selectedImage ? selectedImage.S : ad.images[0].S }}"/>
+				</div>
+				<div class="images-wrapper" 
+					ng-style="{'width': (ad.images.length  * imageListVisibleWidth / imagesPerPage) + 'px', 'left': position + 'px'}">
+					<div class="small image-container" ng-repeat="image in ad.images">
+						<img class="image" ng-src="{{ image.ICON }}" ng-click="handleImageClicked($event, image)"/>
+					</div>
+				</div>
+
+				<div class="images-counter">
+					{{ ad.images.length }} {{ 'Images' | translate }}
+				</div>
+
+				<div class="navigation-buttons">
+					<div class="button left" ng-click="handleLeftButtonClick($event)">
+						
+					</div>
+					<div class="button right" ng-click="handleRightButtonClick($event)">
+						
+					</div>
+				</div>
+				
+			</div>
+			<div class="seller-information">
+				<div ng-if="ad.sellerType == 'PRIVATE'" class="seller-name">
+					{{ ad.sellerFirstName }} {{ ad.sellerLastName }}
+				</div>
+				<div ng-if="ad.sellerType == 'DEALER'" class="seller-name">
+					{{ ad.sellerCompanyName }}
+				</div>
+
+				<div class="city">
+					{{ ad.zipCode ? ad.zipCode + ', ' : '' }} {{ ad.city }} 
+				</div>
+				<div class="street">
+					{{ ad.street }}
+				</div>
+
+				<div ng-if="ad.phoneNumbers && ad.phoneNumbers.length > 0" class="phone-numbers">
+					{{ 'Tel:' | translate }}
+					<div ng-repeat="phone in ad.phoneNumbers track by $index" class="phone">
+						{{ phone }}
+					</div>
+				</div>
+			</div>
+
+			<div class="buttons-group">
+				<div class="button-wrapper">
+					<div class="button" ng-click="handleMyParkingAddButtonClick()">
+						<span class="label">{{ 'Park' | translate }}</span>
+						<div class="icon my-parking"></div>
+					</div>
+				</div>
+
+				<div class="button-wrapper">
+					<div class="button">
+						<span class="label">{{ 'Stores' | translate }} </span>
+						<div class="icon affiliate"></div>
+					</div>
+				</div>
+
+				<div class="button-wrapper">
+					<div class="button">
+						<span class="label">{{ 'Groups' | translate }}</span>
+						<div class="icon group"></div>
+					</div>
+				</div>
+
+				<div class="button-wrapper" ng-click="handleDeleteAdButtonClick()">
+					<div class="button">
+						<span class="label">{{ 'Delete' | translate }}</span>
+						<div class="icon trash"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-information big-container no-border" ng-show="selectedTabData.key == 'GENERAL'">
+			<a href="{{ ad.originPageUrl }}" target="_blank">
+				<div class="title">
+					{{ MAKES[ad.make].name | specialLabelsTranslator }} {{ MAKES[ad.make].models[ad.model].model | specialLabelsTranslator }}
+				</div>
+			</a>
+
+			<div class="condition" >
+				{{ DROP_DOWN_OPTIONS.CONDITION[ad.condition].value | translate }}, {{ (ad.damaged || ad.accident ? 'Had accident' : 'Accident free') | translate }}
+			</div>
+
+			<div class="prices-container" ng-if="ad.publicPrice">
+				{{ 'Public price' | translate }}
+				<div class="price public-price">
+					{{ ad.publicPrice | localizedCurrency }}
+					<div class="vatable" ng-if="ad.vatable">
+						{{ 'VAT reportable' | translate }}
+					</div>
+				</div>
+			</div>
+
+			<div class="prices-container left-offset-10" permission-evaluator ng-show="hasRole('DEALER') && ad.dealerPrice">
+				{{ 'Dealer price' | translate }}
+				<div class="price dealer-price">
+					{{ ad.dealerPrice | localizedCurrency }}
+					<div class="vatable" ng-if="ad.vatable">
+						{{ 'VAT reportable' | translate }}
+					</div>
+				</div>
+			</div>
+
+			<div class="first-registration info-row">
+				{{ 'FRY' | translate }} {{ ad.firstRegistrationMonth}}/{{ ad.firstRegistrationYear }}
+			</div>
+
+			<div class="mileage info-row">
+				{{ ad.mileage | localizedNumberFormatter}} {{ 'KM' | translate }} 
+			</div>
+
+			<div class="power info-row">
+				{{ ad.power }} {{ 'KW' | translate }} ({{ (ad.power * 1.36).toFixed(0) }} {{ 'HP' | translate }})
+			</div>
+
+			<div class="fuel info-row">
+				{{ DROP_DOWN_OPTIONS.FUEL[ad.fuel].value ? (DROP_DOWN_OPTIONS.FUEL[ad.fuel].value | translate) : '' }}
+			</div>
+
+			<div class="gearbox info-row">
+				{{ DROP_DOWN_OPTIONS.GEARBOX[ad.gearbox].value ? (DROP_DOWN_OPTIONS.GEARBOX[ad.gearbox].value | translate) : '' }}
+			</div>
+
+			<div class="exterior info-row">
+				{{ DROP_DOWN_OPTIONS.CATEGORY[ad.category].value ? (DROP_DOWN_OPTIONS.CATEGORY[ad.category].value | translate) : '' }}
+				{{ DROP_DOWN_OPTIONS.EXTERIOR_COLOR[ad.exteriorColor].value ? (DROP_DOWN_OPTIONS.EXTERIOR_COLOR[ad.exteriorColor].value | translate) : '' }}
+				{{ ad.metallic ? ('Metallic' | translate) : '' }}
+			</div>
+
+			<div class="door info-row" ng-if="ad.doorCountObject">
+				{{ ad.doorCountObject.value }} {{ 'Doors' | translate}} 
+			</div>
+
+			<div class="interior info-row">
+				<span ng-if="ad.seatsCount">
+					{{ ad.seatsCount }} {{ 'Seats' | translate }}
+				</span>
+				<span ng-if="ad.interiorType">
+					{{ ad.interiorType.value | translate }}
+				</span>
+				<span ng-if="ad.interiorColor">
+					{{ ad.interiorColor.value | translate }}
+				</span>
+			</div>
+		</div>
+
+		<div class="equipment-information big-container" ng-show="selectedTabData.key == 'GENERAL'">
+			<div class="title">
+				{{ 'Equipment' | translate }}
+			</div>
+			<div ng-if="ad.features" class="features">
+				<div class="feature-item-container three-columns">
+					<div ng-repeat="feature in ad.features track by $index | orderBy: 'value | translate'" ng-if="FEATURES[feature]">
+						<div class="feature-item">
+							<div class="tick-mark"></div>
+							{{ FEATURES[feature].value | translate }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="description-information big-container" auto-expanding="boundaries" ng-show="selectedTabData.key == 'DESCRIPTION'">
+			<span ng-bind-html="ad.detailedDescription">
+			</span>
+		</div>
+
+		<div ng-show="selectedTabData.key == 'DESCRIPTION' && boundaries.toggleMoreButtonVisible" class="button-right">
+			<span ng-click="handleShowHideButtonClick()">{{ boundaries.expanded ? ('Show less' | translate) : ('Show more' | translate) }}</span>
+		</div>
+
+		<div class="providers">
+			<div class="label">
+				{{ 'Vehicle can be found in:' | translate }}
+			</div>
+			<div class="duplicates-container">
+				<span class="duplicates" ng-repeat="provider in ad.providers">
+					<span class="duplicate" ng-repeat="duplicate in provider.duplicates">
+						<a href="{{ duplicate.originPageUrl }}" target="_blank">
+							<span ng-if="provider.name == 'AUTOSCOUT'">
+								autoscout24
+							</span>
+							<span ng-if="provider.name == 'MOBILE_DE'">
+								mobile.de
+							</span>
+							<span ng-if="provider.name == 'PKW'">
+								pkw.de
+							</span>
+						</a>
+					</span>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

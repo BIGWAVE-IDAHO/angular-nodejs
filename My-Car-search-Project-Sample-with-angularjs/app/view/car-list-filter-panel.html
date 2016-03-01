@@ -1,0 +1,178 @@
+<div class="filters">
+
+	<div class="title-container" ng-click="handleTitleClick($event)" ng-class="{'collapsed': !model.filterExpanded}">
+		<div class="title">
+			{{ 'Result filter' | translate }}
+		</div>
+		<div class="expand-button-icon">
+			<div class="expand-icon">
+			</div>
+		</div>
+	</div>
+
+	<div class="filters-list" ng-class="{'collapsed': !model.filterExpanded}">
+		<div class="filter-row clear-button-container">
+			<div class="filter-button" ng-click="handleClearFiltersClick()">
+				<div class="icon">
+				</div>
+				<div class="label">
+					{{ 'Clear filter' | translate }}
+				</div>
+			</div>
+		</div>
+
+		<div class="filter-row">
+			<div class="whole-row">
+				<input type="text" ng-model="filter.maker" parse-complex-filter-string="{caseSensitive: false}" ng-class="{'filled': filter.maker}" placeholder="{{ 'Make' | translate }}" />
+			</div>
+
+		</div>
+
+		<div class="filter-row">
+			<div class="whole-row">
+				<input type="text" ng-model="filter.model" parse-complex-filter-string="{caseSensitive: false}" ng-class="{'filled': filter.model}" placeholder="{{ 'Model' | translate }}" />
+			</div>
+		</div>
+
+		<div class="filter-row">
+			<div class="whole-row">
+				<input type="text" ng-model="filter.version" parse-complex-filter-string="{caseSensitive: false}" ng-class="{'filled': filter.version}" placeholder="{{ 'Version' | translate }}" />
+			</div>
+
+		</div>
+
+		<div class="filter-row">
+			<div class="whole-row">
+				<input type="text" ng-model="filter.description" parse-complex-filter-string="{caseSensitive: false}" ng-class="{'filled': filter.description}" placeholder="{{ 'Description' | translate }}" />
+			</div>
+		</div>
+
+		<div class="filter-row">
+			<div class="whole-row">
+				<input type="text" ng-model="filter.fuelType" parse-complex-filter-string="{caseSensitive: false}" ng-class="{'filled': filter.fuelType}" placeholder="{{ 'Fuel Type' | translate }}" />
+			</div>
+		</div>
+
+		<div class="filter-row">
+			<div class="whole-row">
+				<input type="text" ng-model="filter.color" parse-complex-filter-string="{caseSensitive: false}" ng-class="{'filled': filter.color}" placeholder="{{ 'Color' | translate }}" />
+			</div>
+		</div>
+
+		<div class="filter-row">
+			<div class="filter-input half-row">
+				<input type="text" ng-model="filter.kmFrom" ng-class="{'filled': filter.kmFrom}" placeholder="{{ 'Mileage from' | translate }}" />
+			</div>
+
+			<div class="filter-input half-row">
+				<input type="text" ng-model="filter.kmTo" ng-class="{'filled': filter.kmTo}" placeholder="{{ 'Mileage to' | translate }}" />
+			</div>
+
+		</div>
+
+		<div class="filter-row">
+			<div class="filter-input half-row">
+				<input type="text" ng-model="filter.priceFrom" ng-class="{'filled': filter.priceFrom}" placeholder="{{ 'Price from' | translate }}" />
+			</div>
+
+			<div class="filter-input half-row">
+				<input type="text" ng-model="filter.priceTo" ng-class="{'filled': filter.priceTo}" placeholder="{{ 'Price to' | translate }}" />		
+			</div>
+		</div>
+
+		<div class="filter-row">
+			<div class="filter-input half-row">
+				<input type="text" ng-model="filter.powerFrom" ng-class="{'filled': filter.powerFrom}" placeholder="{{ 'KW/HP from' | translate }}" />
+			</div>
+
+			<div class="filter-input half-row">
+				<input type="text" ng-model="filter.powerTo" ng-class="{'filled': filter.powerTo}" placeholder="{{ 'KW/HP to' | translate }}" />
+			</div>
+
+		</div>
+
+		<div class="filter-row" permission-evaluator ng-show="hasRole('DEALER')">
+			<div class="filter-input half-row">
+				<input type="text" ng-model="filter.adAgeFrom" ng-class="{'filled': filter.adAgeFrom}" placeholder="{{ 'Ad age from' | translate }}" />
+			</div>
+
+			<div class="filter-input half-row">
+				<input type="text" ng-model="filter.adAgeTo" ng-class="{'filled': filter.adAgeTo}" placeholder="{{ 'Ad age to' | translate }}" />
+			</div>		
+		</div>
+
+		<div class="filter-row">
+			<div ng-class="{'filled': filter.monthSign}" class="filter-input half-row">
+				<ui-select ng-model="filter.monthSign"
+					theme="select2">
+					<ui-select-match
+						allow-clear="false">
+						{{ $select.selected}}
+					</ui-select-match>
+					<ui-select-choices repeat="sign in filtersSignData">
+						{{ sign }}
+					</ui-select-choices>
+				</ui-select>
+			</div>
+
+			<div ng-class="{'filled': filter.month}" class="filter-input half-row">
+				<ui-select ng-model="filter.month"
+					theme="select2">
+					<ui-select-match
+						placeholder="{{ 'Month' | translate }}"
+						allow-clear="true">
+						{{ $select.selected.label | translate }}
+					</ui-select-match>
+					<ui-select-choices repeat="month in months">
+						{{ month.label | translate }}
+					</ui-select-choices>
+				</ui-select>
+			</div>
+
+		</div>
+
+		<div class="filter-row">
+			<div ng-class="{'filled': filter.yearSign}" class="filter-input half-row">
+				<ui-select ng-model="filter.yearSign"
+					theme="select2">
+					<ui-select-match
+						allow-clear="false">
+						{{ $select.selected}}
+					</ui-select-match>
+					<ui-select-choices repeat="sign in filtersSignData">
+						{{ sign }}
+					</ui-select-choices>
+				</ui-select>
+			</div>		
+
+			<div ng-class="{'filled': filter.year}" class="filter-input half-row">
+				<ui-select ng-model="filter.year"
+					theme="select2">
+					<ui-select-match
+						placeholder="{{ 'Year' | translate }}"
+						allow-clear="true">
+						{{ $select.selected }}
+					</ui-select-match>
+					<ui-select-choices repeat="year in years">
+						{{ year }}
+					</ui-select-choices>
+				</ui-select>
+			</div>
+		</div>
+
+		<div class="filter-row">
+			<div class="whole-row">
+				<input type="text" ng-model="filter.zipCode" ng-class="{'filled': filter.zipCode}" placeholder="{{ 'Zip code' | translate }}" />
+			</div>
+		</div>
+
+		<div class="filter-row">
+			<div class="whole-row">
+				<input type="text" ng-model="filter.providerName" parse-complex-filter-string="{caseSensitive: false}" ng-class="{'filled': filter.providerName}" placeholder="{{ 'Seller' | translate }}" />
+			</div>
+		</div>
+		
+	</div>
+	
+
+</div>

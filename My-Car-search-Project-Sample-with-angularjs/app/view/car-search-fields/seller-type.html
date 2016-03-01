@@ -1,0 +1,21 @@
+<span class="dropdown-label">
+	{{ 'Seller Type' | translate }}
+</span>
+<div ng-class="{'filled': model.selectedSellerType}">
+	<ui-select 
+		ng-model="model.selectedSellerType" 
+		ng-change="handleSelectedSellerTypeChange()"
+		theme="select2"
+		reset-search-input="true"
+		reset-ui-select-active-index>
+		<ui-select-match 
+			placeholder="{{ 'Any' | translate }}" 
+			allow-clear="true">
+			{{ $select.selected.value | translate }}
+		</ui-select-match>
+		<ui-select-choices 
+			repeat="value in dropDownOptionsArrays.SELLER_TYPE | startsWith:'value':$select.search:true | orderBy: 'value | translate'">
+			{{ value.value | translate }}
+		</ui-select-choices>
+	</ui-select>
+</div>

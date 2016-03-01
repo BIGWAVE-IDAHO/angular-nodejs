@@ -1,0 +1,18 @@
+<div class="cardetective-settings">
+	<div class="save-data-button duplicates-save" ng-click="handleSaveDublicatePropertiesButtonClick()">
+		{{ 'Change settings' | translate }}
+	</div>
+
+	<div class="info">
+		<div class="info-icon">
+		</div>
+		{{ 'Identical advertisements are filtered out using the following settings.' | translate }}
+		<hr class="separator-line"/>
+	</div>
+
+	<div class="checkbox-group">
+		<span class="checkbox-element" ng-repeat="duplicateProperty in duplicateProperties" custom-checkbox option-item="duplicateProperty">
+		</span>
+		<div class="vertical-line"></div>
+	</div>
+</div>

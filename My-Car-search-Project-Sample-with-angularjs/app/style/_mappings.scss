@@ -1,0 +1,42 @@
+.mappings {
+	.makes {
+		width: 100%;
+		.mapping {
+			width: 100%;
+			
+		}
+	}
+
+	.models {
+		margin-left: 20px;
+
+	}
+
+	.parameter {
+		display: inline-block;
+		float: left;
+		border: 1px solid #000000;
+		padding: 10px;
+		margin-top: 10px;
+		width: 15%;
+		&.autoscout {
+			color: #0000FF;
+			border-color: #0000FF;
+		}
+
+		&.mobile {
+			color: #FF0000;
+			border-color: #FF0000;
+		}
+	}
+
+	.mappings-table-container {
+		.parameter {
+			width: 15%;
+		}
+	}
+
+	.clear {
+		clear: both;
+	}
+}

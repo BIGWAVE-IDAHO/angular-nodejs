@@ -1,0 +1,5 @@
+<div class="grid-cell ad-life" ng-style="{'width': getColumnWidth(cell.id)}" ng-class="{'age-new': row.adLife < 31, 'age-average': row.adLife > 30 && row.adLife < 61, 'age-old': row.adLife > 60}">
+	<div class="content">
+		{{ row.adLife }}
+	</div>
+</div>

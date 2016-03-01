@@ -1,0 +1,21 @@
+<span class="dropdown-label">
+	{{ 'Euro norm' | translate}}
+</span>
+<div ng-class="{'filled': model.selectedEmissionClass}">
+	<ui-select 
+		ng-model="model.selectedEmissionClass"
+		ng-change="handleEmissionClassChange()"
+		theme="select2"
+		reset-search-input="true"
+		reset-ui-select-active-index>
+		<ui-select-match 
+			placeholder="{{ 'Any' | translate }}"
+			allow-clear="true">
+			{{ $select.selected.value | translate}}
+		</ui-select-match>
+		<ui-select-choices 
+			repeat="value in dropDownOptionsArrays.EMISSION_CLASS | startsWith:'value':$select.search:true | orderBy: 'value | translate'">
+			{{ value.value | translate }}
+		</ui-select-choices>
+	</ui-select>
+</div>

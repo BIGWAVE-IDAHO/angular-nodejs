@@ -1,0 +1,11 @@
+<div class="grid-cell price" ng-style="{'width': getColumnWidth(cell.id)}">
+
+	<div class="content" ng-class="{'striked-through': row.priceChanged}">
+		<div ng-if="!row.priceChanged">{{ (Math.round(row.publicPrice)) | localizedCurrency }}</div>
+		<div ng-if="row.priceChanged">{{ (Math.round(row.oldPrice)) | localizedCurrency }}</div>
+		<div ng-if="row.priceChanged">{{ (Math.round(row.publicPrice)) | localizedCurrency }}</div>
+
+		<hr ng-if="row.priceChanged"/>
+	</div>
+
+</div>

@@ -1,0 +1,8 @@
+<span class="dropdown-label">
+	{{ 'Fuel Type' | translate }}
+</span>
+<div multiple-selection-drop-down
+	items="model.fuelTypes"
+	order-criteria="['isOther', 'value | translate']"
+	placeholder="'Any' | translate">
+</div>

@@ -1,0 +1,9 @@
+<span class="dropdown-label">
+	{{ 'Version' | translate }}
+</span>
+
+<div class="clear-button-container" ng-class="{'filled': model.carModelVersion}">
+	<input class="search-input" ng-model="model.carModelVersion" />
+	<div clear-button model="model.carModelVersion" change-handler="handleVersionChange">
+	</div>
+</div>

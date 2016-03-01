@@ -1,0 +1,10 @@
+<div class="grid-cell power" ng-style="{'width': getColumnWidth(cell.id)}">
+	<div class="content">
+		<div>
+			{{ (row.power == 0) ? '' : (row.power  | localizedNumberFormatter) }} {{ (row.power == 0) ? '' : ('KW' | translate) }}
+		</div>
+		<div>
+			{{ (row.power == 0) ? '' : ((row.power  * 1.36).toFixed(0) | localizedNumberFormatter ) }} {{ (row.power == 0) ? '' : ('HP' | translate) }}
+		</div>
+	</div>
+</div>

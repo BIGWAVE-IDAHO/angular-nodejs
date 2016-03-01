@@ -1,0 +1,25 @@
+<div class="multiple-select clear-button-container" ng-class="{'filled': hasSelectedItems}">
+	<div class="trigger" ng-click="handleFocuserClick($event)">
+		<span>
+			<span class="placeholder">
+				{{ actualPlaceholder }}
+			</span>
+			<input  type="text" class="focuser">
+
+			<span class="arrow">
+				<div class="icon">
+				</div>
+			</span>
+		</span>
+	</div>
+	<div class="clear-icon" ng-click="handleClearButtonClick($event)" ng-class="{'hidden': !hasSelectedItems}">
+		<div class="icon-container">
+			<div class="icon">
+			</div>
+		</div>
+	</div>
+	<div class="options" ng-class="{'visible': optionsVisible}">
+		<div checkbox-tree options="items" class="checkbox" order-criteria="orderCriteria">
+		</div>
+	</div>
+</div>

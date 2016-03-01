@@ -1,0 +1,27 @@
+<div class="cardetective-settings">
+	<div class="save-data-button" ng-click="handleSaveButtonClick()">
+		{{ 'Change settings' | translate }}
+	</div>
+
+	<h2>
+		{{ 'Page size configuration' | translate }}
+	</h2>
+
+	<div class="page-size-select cardetective-select2-theme">
+		<ui-select ng-model="model.pageSize"
+			theme="select2"
+			reset-ui-select-active-index>
+
+			<ui-select-match 
+				allow-clear="false">
+				{{ $select.selected }}
+			</ui-select-match>
+
+			<ui-select-choices 
+				repeat="number in pages">
+				{{ number }}
+			</ui-select-choices>
+
+		</ui-select>
+	</div>
+</div>

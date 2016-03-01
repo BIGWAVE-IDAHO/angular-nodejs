@@ -1,0 +1,8 @@
+{
+    "APP_CONFIG" : {
+        "clientBaseUrl" : "http://213.240.143.23/",
+        "serviceBaseUrl" : "http://213.240.143.23:8080/",
+        "useHttps": false,
+        "googleCaptchaPublicKey": "6Lc5cQsTAAAAAHV2GXuLVN5FGjt9u0jS0DGOI7iC"
+    }
+}

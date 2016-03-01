@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<base href="/" />
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" />
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		<!-- build:css({.tmp,app}) style/main.min.css -->
+			<link rel="stylesheet" href="style/main.css" />
+		<!-- endbuild -->
+
+		<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+
+		<!-- build:js scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="bower_components/es5-shim/es5-shim.js"></script>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/json3/lib/json3.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/momentjs/moment.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/x2js/xml2json.min.js"></script>
+		<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+		<script src="bower_components/cryptojslib/rollups/aes.js"></script>
+		<script src="bower_components/ng-error/ng-error.js"></script>
+		<script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
+		<script src="bower_components/angular-ui-select/dist/select.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/select2/select2.js"></script>
+		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="bower_components/ngDialog/js/ngDialog.js"></script>
+		<script src="bower_components/angular-recaptcha/release/angular-recaptcha.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+
+
+		<!-- build:js({.tmp,app}) script/scripts.js -->
+
+		<script type="text/javascript" src="script/config.js"></script>
+		<script type="text/javascript" src="configuration/car-search-url-parameters-map.js"></script>
+		<script type="text/javascript" src="configuration/saved-search-parameters-map.js"></script>
+		<script type="text/javascript" src="configuration/months.js"></script>
+		<script type="text/javascript" src="configuration/service-ids.js"></script>
+		<script type="text/javascript" src="configuration/duplicate-properties-map.js"></script>
+		<script type="text/javascript" src="configuration/result-columns.js"></script>
+		<script type="text/javascript" src="configuration/error-messages.js"></script>
+		<script type="text/javascript" src="configuration/mobile-api-request-parameters-mapping.js"></script>
+		<script type="text/javascript" src="configuration/vatable-options.js"></script>
+		<script type="text/javascript" src="configuration/fuel-grouping.js"></script>
+		<script type="text/javascript" src="script/app.js"></script>
+
+		<script type="text/javascript" src="script/i18n/translations.js"></script>
+		
+		<!--Controllers-->
+		<script type="text/javascript" src="script/controller/soapclient.js"></script>
+		<script type="text/javascript" src="script/controller/car-search-controller.js"></script>
+		<script type="text/javascript" src="script/controller/dealer-search-controller.js"></script>
+		<script type="text/javascript" src="script/controller/application-controller.js"></script>
+		<script type="text/javascript" src="script/controller/login-controller.js"></script>
+		<script type="text/javascript" src="script/controller/registration-controller.js"></script>
+		<script type="text/javascript" src="script/controller/forgot-password-controller.js"></script>
+		<script type="text/javascript" src="script/controller/mappings-table-controller.js"></script>
+		<script type="text/javascript" src="script/controller/url-search-api-documentation-controller.js"></script>
+		<script type="text/javascript" src="script/controller/settings-menu-controller.js"></script>
+
+		<!--Services-->
+		<script type="text/javascript" src="script/service/rest/export-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/rest/providers-mapping-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/rest/lookup-data-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/rest/registration-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/rest/statistics-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/rest/authentication-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/rest/profile-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/rest/parking-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/rest/searches-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/parameters-mapper-service.js"></script>
+		
+		<script type="text/javascript" src="script/service/car-search-service.js"></script>
+		<script type="text/javascript" src="script/service/mobile-de-parse-strategy.js"></script>
+		<script type="text/javascript" src="script/service/autoscout-parse-strategy.js"></script>
+		<script type="text/javascript" src="script/service/pkw-parse-strategy.js"></script>
+		<script type="text/javascript" src="script/service/manager/authentication-manager.js"></script>
+		<script type="text/javascript" src="script/service/manager/localization-manager.js"></script>
+		<script type="text/javascript" src="script/service/manager/profile-manager.js"></script>
+		<script type="text/javascript" src="script/service/web-service-credentials.js"></script>
+		<script type="text/javascript" src="script/service/lookup-data-service.js"></script>
+		<script type="text/javascript" src="script/service/vin-search-service.js"></script>
+		<script type="text/javascript" src="script/service/silverdat-time-service.js"></script>
+		<script type="text/javascript" src="script/service/rest/forgot-password-rest-service.js"></script>
+		<script type="text/javascript" src="script/service/third-party-lookup-data-service.js"></script>
+		<script type="text/javascript" src="script/service/uid-util.js"></script>
+		<script type="text/javascript" src="script/service/silverdat-parse-strategy.js"></script>
+		<script type="text/javascript" src="script/service/util/data-transform-util.js"></script>
+		<script type="text/javascript" src="script/service/util/array-util.js"></script>
+		<script type="text/javascript" src="script/service/util/publish-subscribe-channel.js"></script>
+		<script type="text/javascript" src="script/service/password-rules-service.js"></script>
+
+		<!--Directives-->
+		<script type="text/javascript" src="script/directive/result-list.js"></script>
+		<script type="text/javascript" src="script/directive/car-list-row.js"></script>
+		<script type="text/javascript" src="script/directive/car-search-component.js"></script>
+		<script type="text/javascript" src="script/directive/custom-checkbox.js"></script>
+		<script type="text/javascript" src="script/directive/removable-tabs-list-component.js"></script>
+		<script type="text/javascript" src="script/directive/ad-detail.js"></script>
+		<script type="text/javascript" src="script/directive/expandable-checkbox-list.js"></script>
+		<script type="text/javascript" src="script/directive/car-search-controller-configuration.js"></script>
+		<script type="text/javascript" src="script/directive/car-list-filter-panel.js"></script>
+		<script type="text/javascript" src="script/directive/vertical-scroll-offset.js"></script>
+		<script type="text/javascript" src="script/directive/keep-between.js"></script>
+		<script type="text/javascript" src="script/directive/horizontal-scroll-offset.js"></script>
+		<script type="text/javascript" src="script/directive/reset-ui-select-active-index.js"></script>
+		<script type="text/javascript" src="script/directive/mappings-table.js"></script>
+		<script type="text/javascript" src="script/directive/settings/profile-edit.js"></script>
+		<script type="text/javascript" src="script/directive/settings/silverdat-settings.js"></script>
+		<script type="text/javascript" src="script/directive/settings/cardetective-settings.js"></script>
+		<script type="text/javascript" src="script/directive/settings/service-providers-settings.js"></script>
+		<script type="text/javascript" src="script/directive/settings/result-page-size-settings.js"></script>
+		<script type="text/javascript" src="script/directive/editable-label.js"></script>
+		<script type="text/javascript" src="script/directive/checkbox-tree.js"></script>
+		<script type="text/javascript" src="script/directive/multiple-selection-drop-down.js"></script>
+		<script type="text/javascript" src="script/directive/permission-evaluator.js"></script>
+		<script type="text/javascript" src="script/directive/dragable-component.js"></script>
+		<script type="text/javascript" src="script/directive/reorderable.js"></script>
+		<script type="text/javascript" src="script/directive/css-toggle.js"></script>
+		<script type="text/javascript" src="script/directive/clear-button.js"></script>
+		<script type="text/javascript" src="script/directive/statistics/overall-statistics.js"></script>
+		<script type="text/javascript" src="script/directive/my-parking.js"></script>
+		<script type="text/javascript" src="script/directive/hide-on-click.js"></script>
+		<script type="text/javascript" src="script/directive/resizable-component.js"></script>
+		<script type="text/javascript" src="script/directive/tree-component.js"></script>
+		<script type="text/javascript" src="script/directive/result-metrics.js"></script>
+		<script type="text/javascript" src="script/directive/auto-expanding.js"></script>
+		<script type="text/javascript" src="script/directive/password-validation.js"></script>
+		<script type="text/javascript" src="script/directive/enhanced-filter-parser.js"></script>
+
+		<!--Filters-->
+		<script type="text/javascript" src="script/filter/start-from.js"></script>
+		<script type="text/javascript" src="script/filter/ceil.js"></script>
+		<script type="text/javascript" src="script/filter/localized-currency.js"></script>
+		<script type="text/javascript" src="script/filter/localized-number-formatter.js"></script>
+		<script type="text/javascript" src="script/filter/localized-date.js"></script>
+		<script type="text/javascript" src="script/filter/localized-date-time.js"></script>
+		<script type="text/javascript" src="script/filter/starts-with.js"></script>
+		<script type="text/javascript" src="script/filter/models-ordering.js"></script>
+		<script type="text/javascript" src="script/filter/special-labels-translator.js"></script>
+		<script type="text/javascript" src="script/filter/integer.js"></script>
+
+		<!-- endbuild -->
+	</head>
+	<body ng-app="cardetectiveApp" ng-controller="ApplicationController" ng-cloak>
+		<div class="body-overlay" ng-if="savingDataOverlayVisible">
+			<img src="/image/big-ajax-loading.gif" class="big-loading centered"/>
+		</div>
+
+		<div class="header-container">
+			<header class="header">
+
+				<nav class=" right authenticated-user-navigation" ng-if="isAuthenticated()">
+					<div class="my-parking-container" hide-on-click property-chain="applicationModel.myParkingVisible">
+						<span class="parking-cars-count">{{ profileManager.getParkedCars().length }}</span>
+						<div class="nav-button my-parking" ng-click="handleMyParkingButtonClick()" >
+						</div>
+
+						<my-parking ng-if="applicationModel.myParkingVisible">
+						</my-parking>
+					</div>
+
+					<div class="vertical-separator">
+					</div>
+
+					<div class="nav-button people">
+					</div>
+
+					<div class="vertical-separator">
+					</div>
+
+					<div class="nav-button settings" ng-click="handleOpenSettingsMenuButtonClick()">
+					</div>
+
+					<div class="vertical-separator">
+					</div>
+
+					<div class="nav-button notifications">
+					</div>
+
+					<div class="nav-button profile" hide-on-click property-chain="applicationModel.logoutButtonVisible">
+						<div ng-click="handleExpandableProfileButtonClick()">
+							<div class="expandable-icon"></div>
+							<span class="button-title">
+								{{ 'Welcome' | translate }} {{ honorificsMap[authenticationManager.getProfile().honorific] | translate }} {{ authenticationManager.getProfile().lastName }}
+							</span>
+						</div>
+						<div class="sub-button" ng-if="applicationModel.logoutButtonVisible" ng-click="handleLogoutButtonClick()">
+							<span class="button-title">
+								{{ 'Logout' | translate }}
+							</span>
+						</div>
+					</div>
+
+					<div class="nav-button contact-info">
+							<div class="icon phone"></div>
+							<div class="label">038751-33000</div>
+
+							<div class="icon email"></div>
+							<div class="label">info@cardetektiv.de</div>
+					</div>
+				</nav>
+				<nav ng-if="!isAuthenticated()">
+					<ul>
+						<li>
+							<a ui-sref="login" ui-sref-active="active-link" translate>
+								Login
+							</a>
+							<a ui-sref="register" ui-sref-active="active-link" translate>
+								Register
+							</a>
+
+							<a ui-sref="forgotPassword" ui-sref-active="active-link" translate>
+								forgot password
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+		
+		<div class="root-container" ui-view>
+		
+		</div>
+		
+		<div class="footer-container" >
+			<footer class="footer">
+				<div class="left">
+					<span class="footer-link no-border">Kontakt</span>
+					<span class="footer-link">Nutzungsbedingungen</span>
+					<span class="footer-link">Impressum</span>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

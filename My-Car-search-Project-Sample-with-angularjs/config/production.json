@@ -1,0 +1,8 @@
+{
+    "APP_CONFIG" : {
+        "clientBaseUrl" : "https://app.cardetektiv.de/",
+        "serviceBaseUrl" : "https://app.cardetektiv.de/api/",
+        "useHttps": true,
+        "googleCaptchaPublicKey": "6Lc5cQsTAAAAAHV2GXuLVN5FGjt9u0jS0DGOI7iC"
+    }
+}

@@ -1,0 +1,8 @@
+<div class="grid-cell image" ng-style="{'width': getColumnWidth(cell.id)}">
+	<div class="new-vehicle-icon" ng-class="{'visibility-disabled': !row.isNew}"></div>
+
+	<div class="small-hovering-image content">
+		<img ng-if="row.images && row.images[0].ICON" ng-src="{{ row.images[0].ICON }}" class="small-icon" />
+		<img class="big-showing-image" ng-src="{{ row.images[0].XL }}" />
+	</div>
+</div>

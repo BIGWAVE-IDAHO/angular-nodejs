@@ -1,0 +1,245 @@
+.settings-container {
+	background-color: #F1F1F1;
+	text-align: initial;
+	width: 1000px;
+	height: 400px;
+
+	input {
+		width: 300px;
+	}
+
+	.page-size-select {
+		width: 100px;
+		input {
+			width: 90px;
+		}
+	}
+
+	.settings-options {
+		float: left;
+		background: #C8C8C8;
+		width: 250px;
+		height: 400px;
+
+
+		.settings-option-item {
+			padding-left: 5px;
+			text-align: left;
+			font-weight: bold;
+			font-size: 17px;
+			height: 60px;
+			line-height: 60px;
+			color: #FFFFFF;
+			position: relative;
+			cursor: pointer;
+			border-bottom: 1px solid #E1E1E1;
+			box-shadow: 0px 1px 0px #959595;
+
+			&.selected {
+				cursor: default;
+				color: #000000;
+				background-color: #F1F1F1;
+			}
+			&:last-child {
+				border-bottom: none;
+				box-shadow: none;
+			}
+		}
+	}
+
+	.settings-selected-tab {
+		width: 745px;
+		display: inline-block;
+		padding: 20px;
+		padding-left: 50px;
+	}
+}
+
+.profile-edit,
+.silverdat-settings,
+.cardetective-settings,
+.service-providers-settings {
+
+	text-align: left;
+
+	.save-data-button {
+		color: white;
+		background-color: #1A7BA9;
+		width: 200px;
+		height: 35px;
+		position: absolute;
+		right: 40px;
+		top: 20px;
+		line-height: 35px;
+		text-align: center;
+		font-size: 16px;
+		cursor: pointer;
+
+		&.password {
+			top: 180px;
+		}
+
+		&.duplicates-save {
+			top: 250px;
+		}
+	}
+
+
+	.separator-line {
+		width: 100%;
+		margin-bottom: 25px;
+	}
+}
+
+.cardetective-settings {
+	.info {
+		font-weight: bold;
+		
+		.info-icon {
+			display: inline-block;
+			vertical-align: middle;
+			@include icons-sprite(info);
+			width: icons-sprite-width(info);
+			height: icons-sprite-height(info);
+		}
+	}
+
+	.custom-checkbox {
+
+		.checkbox-image {
+			float: right;
+		}
+
+		.label {
+			float: left;
+			font-weight: bold;
+		}
+	}
+
+	.checkbox-group {
+		position: relative;
+		width: 500px;
+
+		.checkbox-element {
+			display: inline-block;
+			width: 45%;
+			margin-right: 25px;
+			margin-top: 10px;
+		}
+
+		.vertical-line {
+			position: absolute;
+			top: 0;
+			left: 48%;
+			background-color: #c6c6c6;
+			width: 1px;
+			height: 100%;
+		}
+	}
+
+}
+
+.edit-line {
+	width: 600px;
+	height: 40px;
+
+	.password-input {
+		margin-bottom: 10px;
+	}
+
+	.edit-configuration-label {
+		width: 160px;
+		float: left;
+		font-weight: bold;
+	}
+
+	.edit-configuration-value-label {
+		min-width: 160px;
+		min-height: 21px;
+		display: inline-block;
+
+		&.label-border {
+			border: 1px solid black;
+		}
+	}
+
+	.edit-value {
+		width: 300px;
+		text-align: left;
+		float: right;
+		cursor: pointer;
+
+		input {
+			width: 150px;
+
+			&.email-input {
+				width: 200px;
+			}
+		}
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.service-providers-container {
+	float: left;
+	.service-providers {
+		text-align: center;
+		border: 1px solid #CBCBCB;
+		float: left;
+		width: 465px;
+		height: 60px;
+		margin-right: 24px;
+
+		background: #EFEFEF;
+		border-radius: 4px;
+		.checkbox-inline {
+			display: inline-block;
+		}
+
+		.service-providers-checkbox {
+			height: 49px;
+			margin-top: 5px;
+			display: inline-block;
+			border-right: 1px solid #FFFFFF;
+			box-shadow: 1px 0px 0px #CBCBCB;
+
+			&:last-child {
+				border-right: none;
+				box-shadow: none;
+			}
+
+			.icon {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 15px;
+
+				&.mobile-icon {
+					@include icons-sprite(mobile-de-icon);
+					width: icons-sprite-width(mobile-de-icon);
+					height: icons-sprite-height(mobile-de-icon);
+				}
+
+				&.autoscout-icon {
+					@include icons-sprite(autoscout-icon);
+					width: icons-sprite-width(autoscout-icon);
+					height: icons-sprite-height(autoscout-icon);
+				}
+
+				&.pkw-icon {
+					@include icons-sprite(pkw-icon);
+					width: icons-sprite-width(pkw-icon);
+					height: icons-sprite-height(pkw-icon);
+				}
+			}
+
+			.custom-checkbox {
+				margin: 15px;
+				margin-left: 25px;
+			}
+		}
+	}
+	
+}

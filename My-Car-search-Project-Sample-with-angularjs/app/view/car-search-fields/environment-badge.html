@@ -1,0 +1,21 @@
+<span class="dropdown-label">
+	{{ 'Env. Badge' | translate }}
+</span>
+<div ng-class="{'filled': model.selectedEnvironmentBadge}">
+	<ui-select 
+		ng-model="model.selectedEnvironmentBadge" 
+		ng-change="handleEmissionStickerChange()"
+		theme="select2"
+		reset-search-input="true"
+		reset-ui-select-active-index>
+		<ui-select-match 
+			placeholder="{{ 'Any' | translate }}" 
+			allow-clear="true">
+			{{ $select.selected.value | translate }}
+		</ui-select-match>
+		<ui-select-choices 
+			repeat="value in dropDownOptionsArrays.EMISSION_STICKER | startsWith:'value':$select.search:true | orderBy: 'value | translate':true">
+			{{ value.value | translate }}
+		</ui-select-choices>
+	</ui-select>
+</div>

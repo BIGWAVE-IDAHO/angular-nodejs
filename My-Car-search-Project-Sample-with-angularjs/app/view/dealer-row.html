@@ -1,0 +1,25 @@
+<div>
+	<div class="left">
+		<div>
+			<a href="{{rowData.homePage}}" target="_blank" class="dealer-info-label name">
+				{{ rowData.companyName }}
+			</a>
+		</div>
+		<div class="dealer-info-label">
+			{{ rowData.street }} {{ rowData.city }}
+		</div>
+		<div class="dealer-info-label">
+			{{ rowData.zipcode }}
+		</div>
+	</div>
+	<div class="right">
+		<div custom-checkbox option-item="rowData.myAutohouse">
+		</div>
+		<div custom-checkbox option-item="rowData.myGroup">
+		</div>
+		<div custom-checkbox option-item="rowData.myBranch">
+		</div>
+		<div custom-checkbox option-item="rowData.myCompetitor">
+		</div>
+	</div>
+</div>

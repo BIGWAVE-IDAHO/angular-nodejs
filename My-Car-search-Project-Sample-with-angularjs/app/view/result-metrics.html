@@ -1,0 +1,80 @@
+<div class="metrics" ng-class="{'expanded': model.metricsExpanded}">
+	<div class="header-title-container" ng-click="handleMetricsTitleClick($event)">
+		<div class="title">
+			{{ 'Metrics' | translate }}
+		</div>
+		<div class="expand-button-icon">
+			<div class="expand-icon">
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<span>
+			{{ 'Result Count:' | translate }}
+		</span>
+		<span>
+			{{ model.estimatedResultCount | localizedNumberFormatter }}
+		</span>
+		<div class="metrics-row">
+			<div class="title-container">
+				<div class="title">
+					{{ 'DAT' | translate}}
+				</div>
+			</div>
+			<div class="left-value">
+				<span class="value-label">
+				{{ 'EK' | translate}}
+				</span>
+				<span class="value">
+					{{ model.datPurchasePriceGross || model.purchasePriceGrossURL | localizedCurrency }}
+				</span>
+			</div>
+			<div class="right-value">
+				<span class="value-label">
+				{{ 'VK' | translate}}
+				</span>
+				<span class="value">
+					{{ model.datSalesPriceGross || model.salesPriceGrossURL | localizedCurrency }}
+				</span>
+			</div>
+		</div>
+		<div class="metrics-row">
+			<div class="title-container">
+				<div class="title">
+					{{ 'Market price' | translate }}
+				</div>
+			</div>
+			<div class="left-value">
+				<span class="value-label">
+				{{ 'min' | translate}}
+				</span>
+				<span class="value">
+					{{ statistics.minimalAdPrice | localizedCurrency }}
+				</span>
+			</div>
+			<div class="right-value">
+				<span class="value-label">
+				{{ 'max' | translate}}
+				</span>
+				<span class="value">
+					{{ statistics.maximalAdPrice | localizedCurrency }}
+				</span>
+			</div>
+		</div>
+
+		<div class="average-price">
+			{{ Math.round(statistics.accumulatedAdPrice / statistics.vehiclesCount) | localizedCurrency }}
+		</div>
+		<div class="vehicle-price-evaluation" ng-if="selectedAd" ng-class="{'above': selectedAd.price - statistics.accumulatedAdPrice / statistics.vehiclesCount > 0}">
+			<span>
+				{{ Math.abs(selectedAd.price - statistics.accumulatedAdPrice / statistics.vehiclesCount) | localizedCurrency }}
+			</span>
+			<span ng-if="selectedAd.price - statistics.accumulatedAdPrice / statistics.vehiclesCount > 0">
+				{{ ' above market price' | translate}}
+			</span>
+			<span ng-if="selectedAd.price - statistics.accumulatedAdPrice / statistics.vehiclesCount <= 0">
+				{{ ' below market price' | translate}}
+			</span>
+		</div>
+	</div>
+</div>

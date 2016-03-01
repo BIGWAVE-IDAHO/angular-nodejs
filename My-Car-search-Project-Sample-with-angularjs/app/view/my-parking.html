@@ -1,0 +1,30 @@
+<div class="my-parking-menu">
+	<div class="parking-header">
+		{{ 'My Parking' | translate }} ({{ cars.length }})
+	</div>
+
+	<div class="parking-container">
+		<div ng-repeat="car in cars">
+			<div class="car-wrapper" style="padding: 6px;">
+				<div class="image-wrapper">
+					<img ng-src="{{ car.mainImageURL }}" />
+				</div>
+				<div class="message-wrapper">
+					<div class="make-label">
+						{{ MAKES[car.make].name | specialLabelsTranslator }} {{ MAKES[car.make].models[car.model].model | specialLabelsTranslator }}
+					</div>
+					<div class="price-label">
+						{{ car.price | localizedCurrency }}
+					</div>
+				</div>
+
+				<div class="trash" ng-click="handleTrashButtonClick(car, $index)">
+				</div>
+
+				<div>
+					<hr/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

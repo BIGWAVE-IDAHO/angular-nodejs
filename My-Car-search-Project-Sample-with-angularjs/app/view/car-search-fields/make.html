@@ -1,0 +1,22 @@
+<span class="dropdown-label">
+	{{ 'Manufacturer' | translate }}
+</span>
+<div ng-class="{'filled': model.selectedCarMaker}">
+	<ui-select ng-model="model.selectedCarMaker"
+		ng-change="handleMakeChange()" 
+		theme="select2"
+		reset-search-input="true"
+		reset-ui-select-active-index>
+		<ui-select-match 
+			placeholder="{{ 'Any' | translate }}"
+			allow-clear="true">
+			{{ $select.selected.name | specialLabelsTranslator}}
+		</ui-select-match>
+
+		<ui-select-choices 
+			group-by="makesGroupingMethod"
+			repeat="make in dropDownOptionsArrays.MAKES | startsWith:'name':$select.search | orderBy:['isOtherMake', '-isImportant', 'name']">
+			{{ make.name | specialLabelsTranslator}}
+		</ui-select-choices>
+	</ui-select>
+</div>

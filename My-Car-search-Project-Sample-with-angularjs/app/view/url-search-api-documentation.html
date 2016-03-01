@@ -1,0 +1,339 @@
+<div class="url-search-api-section-container">
+	<h1 trasnslate>
+		This document describes the URL search API that the Cardetektive webapp provides.
+	</h1>
+
+	<p translate>
+		The API is quite simple. Basically it expects the normal Carsearch URL, which is {{ clientBaseUrl }}car-search, populated with some of the supported search parameters as URl parameters.
+	</p>
+
+	<p>
+		{{ 'Here is a list with the url parameters currently supported by the application:' | translate }}
+		<ul>
+			<li ng-repeat="urlParameter in urlParametersMap | orderBy : urlParameterName">
+				{{ urlParameter.urlParameterName }}
+				<span ng-if="urlParameter.multipleSelection">
+					{{ '(list value allowed)' | translate }}
+				</span>
+				<span ng-if="!urlParameter.collectionPath">
+					{{ '(free text allowed)' | translate }}
+				</span>
+			</li>
+		</ul>
+
+		{{ 'The url parameters marked with (list value allowed) support multiple values separated with a comma' | translate }}
+		{{ 'The url parameters marked with (free text allowed) are free text values, meaning that there is no list with predefined choices. There are still some restictions on some of the fields. The "vin" parameter should be a valid vin number, the "vin-search-first-registration-year" should be in the form MM.YYYY or YYYY. The "vin-search-mileage" should be a valid number. The zip-code needs to be a valid zip-code. The only parameter with no restrictions is the "version".' | translate }}
+	</p>
+
+	<p>
+		{{ 'Here is a sample url. It includes all of the possible url parameters with some sample values ' | translate }}
+
+		<a  target="_blank"
+			ng-href="{{ clientBaseUrl }}car-search?make=AUDI&model=A8&version=alroad&gearbox=MANUAL_GEAR&minimal-mileage=5000&maximal-mileage=10000&minimal-power=44&maximal-power=66&fuel-type=PETROL,GAS_ALL&condition=NEW&color=BLUE,BLACK&doors=TWO_OR_THREE&minimal-price=6000&maximal-price=100000&accident-vehicles=SHOW_ONLY_ACCIDENT_VEHICLES&minimal-first-registration-year=1985&maximal-first-registration-year=2000&minimal-seats=3&maximal-seats=4&euro-norm=EURO3&environement-badge=EMISSIONSSTICKER_RED&zip-code=55218&radius=20&seller-type=FOR_SALE_BY_OWNER&features=METALLIC,ALLOY_WHEELS,AUXILIARY_HEATING,CENTRAL_LOCKING&car-types=EstateCar,OffRoad,Limousine&ad-age=14&vin=WAUZZZ8PX5A033363&vin-search-first-registration-year=01.2006&vin-search-mileage=100000&interior-color=BLACK,BROWN&interior-type=LEATHER&country=FR&parking-sensors=FRONT_SENSORS,REAR_SENSORS&vatable=VATABLE&air-conditioning=AUTOMATIC_CLIMATISATION">
+			{{ clientBaseUrl }}car-search?make=AUDI&model=A8&version=alroad&gearbox=MANUAL_GEAR&minimal-mileage=5000&maximal-mileage=10000&minimal-power=44&maximal-power=66&fuel-type=PETROL,GAS_ALL&condition=NEW&color=BLUE,BLACK&doors=TWO_OR_THREE&minimal-price=6000&maximal-price=100000&accident-vehicles=SHOW_ONLY_ACCIDENT_VEHICLES&minimal-first-registration-year=1985&maximal-first-registration-year=2000&minimal-seats=3&maximal-seats=4&euro-norm=EURO3&environement-badge=EMISSIONSSTICKER_RED&zip-code=55218&radius=20&seller-type=FOR_SALE_BY_OWNER&features=METALLIC,ALLOY_WHEELS,AUXILIARY_HEATING,CENTRAL_LOCKING&car-types=EstateCar,OffRoad,Limousine&ad-age=14&vin=WAUZZZ8PX5A033363&vin-search-first-registration-year=01.2006&vin-search-mileage=100000&interior-color=BLACK,BROWN&interior-type=LEATHER&country=FR&parking-sensors=FRONT_SENSORS,REAR_SENSORS&vatable=VATABLE&air-conditioning=AUTOMATIC_CLIMATISATION
+		</a>
+	</p>
+
+	<p>
+		{{ 'Here is the list with available values for the various url parameters:' | translate }}
+
+		{{ 'Here is the list with the available makes and the corresponding models' }}
+		<div>
+			<span>
+				{{ 'This corresponds to the' | translate }} "make" {{ 'and' | translate }} "model" {{ 'url parameters, respectively' |  translate }}
+			</span>
+			<div ng-repeat="make in makes">
+				<h2>
+					{{ 'Make' | translate }}
+				</h2>	
+				{{ make.key }}
+				<div>
+					<h2>
+						{{ 'Models' | translate }}
+					</h2>
+
+					<span ng-repeat="model in make.models">
+						{{ model.key }} <span ng-if="!$last">, </span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		{{ 'Here is the list with the available car types. This corresponds to the' | translate }} car-types
+		<div>
+			<h2>
+				{{ 'Car types' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="carType in dropDownOptionsArrays.CATEGORY">
+					{{ carType.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available geraboxes. This corresponds to the' | translate }} gearbox
+		<div>
+			<h2>
+				{{ 'Gearboxes' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="gearbox in dropDownOptionsArrays.GEARBOX">
+					{{ gearbox.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available fuel types. This corresponds to the' | translate }} fuel-type
+		<div>
+			<h2>
+				{{ 'Fuels' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="fuel in dropDownOptionsArrays.FUEL">
+					{{ fuel.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available conditions. This corresponds to the' | translate }} condition
+		<div>
+			<h2>
+				{{ 'Conditions' |  translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="condition in dropDownOptionsArrays.CONDITION">
+					{{ condition.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available values for the' | translate }} accident-vehicles
+		<div>
+			<h2>
+				{{ 'Accident vehicles indlusion data' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="accidentVehicle in dropDownOptionsArrays.ACCIDENT_VEHICLES">
+					{{ accidentVehicle.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available values for the' | translate }} interior-type
+		<div>
+			<h2>
+				{{ 'Interior Type' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="ineriorType in dropDownOptionsArrays.INTERIOR_TYPE">
+					{{ ineriorType.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available values for the' | translate }} interior-color
+		<div>
+			<h2>
+				{{ 'Interior Color' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="ineriorColor in dropDownOptionsArrays.INTERIOR_COLOR">
+					{{ ineriorColor.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available values for the' | translate }} parking-sensors
+		<div>
+			<h2>
+				{{ 'Parking Sensors' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="parkingSensor in dropDownOptionsArrays.PARKING_SENSORS">
+					{{ parkingSensor.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available values for the' | translate }} country
+		<div>
+			<h2>
+				{{ 'Country' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="country in dropDownOptionsArrays.COUNTRY">
+					{{ country.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available values for the' | translate }} air-conditioning
+		<div>
+			<h2>
+				{{ 'Air Conditioning' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="airConditioning in dropDownOptionsArrays.CLIMATISATION">
+					{{ airConditioning.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available emission classes. This corresponds to' | translate }} euro-norm
+		<div>
+			<h2>
+				{{ 'Emission Classes' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="emissionClass in dropDownOptionsArrays.EMISSION_CLASS | orderBy: 'key'">
+					{{ emissionClass.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available ad ages. In general the ad age is measured in days. This corresponds to' | translate }} ad-age
+		<div>
+			<h2>
+				{{ 'Ad Ages' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="adAge in dropDownOptionsArrays.AD_AGE | orderBy:'key | integer'">
+					{{ adAge.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available milleages. This corresponds to' | translate }} minimal-mileage, maximal-mileage
+		<div>
+			<h2>
+				{{ 'Mileages' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="mileage in dropDownOptionsArrays.MILEAGE | orderBy: 'key | integer'">
+					{{ mileage.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available exterior colors. This corresponds to' | translate }} color
+		<div>
+			<h2>
+				{{ 'Colors' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="color in dropDownOptionsArrays.EXTERIOR_COLOR | orderBy : key">
+					{{ color.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available door counts. This corresponds to' | translate }} doors
+		<div>
+			<h2>
+				{{ 'Door counts' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="doorCount in dropDownOptionsArrays.DOOR_COUNT | orderBy : key">
+					{{ doorCount.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available first registration years. This corresponds to' | translate }} minimal-first-registration-year, maximal-first-registration-year
+		<div>
+			<h2>
+				{{ 'Years' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="year in dropDownOptionsArrays.YEARS | orderBy : 'key | integer'">
+					{{ year.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available emission stickers. This corresponds to' | translate }} environement-badge
+		<div>
+			<h2>
+				{{ 'Emission Stickers' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="emissionSticker in dropDownOptionsArrays.EMISSION_STICKER">
+					{{ emissionSticker.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available powers(in kilowatts). This corresponds to' | translate }} minimal-power, maximal-power
+		<div>
+			<h2>
+				{{ 'Powers' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="power in dropDownOptionsArrays.POWER | orderBy: 'key | integer'">
+					{{ power.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available prices in euro. This corresponds to' | translate }} minimal-price, maximal-price
+		<div>
+			<h2>
+				{{ 'Prices' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="price in dropDownOptionsArrays.PRICE | orderBy: 'key | integer'">
+					{{ price.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available numbers of seats. This corresponds to' | translate }} minimal-seats, maximal-seats
+		<div>
+			<h2>
+				{{ 'Seats' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="seats in dropDownOptionsArrays.SEATS | orderBy: 'key | integer'">
+					{{ seats.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available seller types. This corresponds to' | translate }} seller-type
+		<div>
+			<h2>
+				{{ 'Seller types' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="seller in dropDownOptionsArrays.SELLER_TYPE">
+					{{ seller.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available features. This corresponds to' | translate }} features
+		<div>
+			<h2>
+				{{ 'Features' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="feature in features | orderBy : 'key'">
+					{{ feature.key }}
+				</li>
+			</ul>
+		</div>
+
+		{{ 'Here is the list with the available vatable options. This corresponds to' | translate }} vatable
+		<div>
+			<h2>
+				{{ 'Vatable Options' | translate }}
+			</h2>
+			<ul>
+				<li ng-repeat="vatable in vatableOptions | orderBy : 'key'">
+					{{ vatable.key }}
+				</li>
+			</ul>
+		</div>
+	</p>
+
+</div>

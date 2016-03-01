@@ -1,0 +1,56 @@
+<div class="three-columns">
+	<div class="search-field">
+		<span class="dropdown-label">
+			{{ 'Browse' | translate }}
+		</span>
+		<div class="clear-button-container" ng-class="{'filled': model.zipCode}">
+			<input class="search-input" type="text" ng-model="model.zipCode" placeholder="{{ 'ZIP Code' | translate }}" />
+			<div clear-button model="model.zipCode" change-handler="handleZipCodeChange">
+			</div>
+		</div>
+	</div>
+
+	<div class="search-field" ng-class="{'filled': model.zipSearchRadius}">
+		<ui-select 
+			ng-model="model.zipSearchRadius" 
+			ng-change="handleRadiusChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'Radius' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value | translate }}
+			</ui-select-match>
+			<ui-select-choices 
+				repeat="value in dropDownOptionsArrays.ZIP_CODE_SEARCH_RADIUS | startsWith:'value':$select.search">
+				{{ value.value | translate }}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+
+	<div class="search-field">
+		<span class="dropdown-label">
+			{{ 'Country' | translate }}
+		</span>
+		<div ng-class="{'filled': model.selectedCountry}">
+			<ui-select 
+				ng-model="model.selectedCountry" 
+				ng-change="handleSelectedCountryChange()"
+				theme="select2"
+				reset-search-input="true"
+				reset-ui-select-active-index>
+				<ui-select-match 
+					placeholder="{{ 'Any' | translate }}" 
+					allow-clear="true">
+					<img ng-src="/image/{{$select.selected.key}}.png"/>{{ $select.selected.key | translate }}
+
+				</ui-select-match>
+				<ui-select-choices 
+					repeat="value in dropDownOptionsArrays.COUNTRY | startsWith:'value':$select.search:true | orderBy: 'value | translate'">
+					<img ng-src="/image/{{value.key}}.png"/> {{ value.key | translate }}
+				</ui-select-choices>
+			</ui-select>
+		</div>
+	</div>
+</div>

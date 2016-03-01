@@ -1,0 +1,186 @@
+.login-section {
+	a {
+		color: #0B9AC9;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	width: 100%;
+	height: 100%;
+
+	.icon-container {
+		padding-top: 32px;
+		padding-bottom: 40px;
+		.icon {
+			@include icons-sprite(login-screen-cardetective-logo);
+			width: icons-sprite-width(login-screen-cardetective-logo);
+			height: icons-sprite-height(login-screen-cardetective-logo);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.register-button {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 40px;
+		display: block;
+	}
+
+	.login-button, .register-button {
+		color: #FFFFFF;
+		font-size: 16px;
+		width: 166px;
+		height: 38px;
+		border-radius: 4px;
+		text-align: center;
+		background: #2386C1;
+
+		&:disabled {
+			cursor: default;
+			background: #999999;
+
+			&:hover {
+				cursor: default;
+				background: #999999;
+			}
+			&:active {
+				cursor: default;
+				background: #999999;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			background: #024f9f;
+		}
+		&:active {
+			cursor: pointer;
+			background: #024f9f;
+		}
+
+	}
+
+	.non-registered-container, .login-container {
+		width: 480px;
+		height: 520px;
+		margin-top: 40px;
+		margin-bottom: 120px;
+		position: relative;
+		color: #000000;
+		background-color: #F1F1F1;
+	}
+
+	.non-registered-container {
+		display: inline-block;
+		float: left;
+		
+		.title {
+			text-align: center;
+			padding-top: 120px;
+			margin-bottom: 40px;
+		}
+
+		.subtitle {
+			text-align: center;
+		}
+	}
+
+	.login-container {
+		margin-left: 500px;
+
+		.title {
+			margin-left: 28px;
+			padding-top: 22px;
+			margin-bottom: 50px;
+		}
+
+		.input-title {
+			font-size: 14px;
+			margin-left: 38px;
+			margin-bottom: 8px;
+			vertical-allign: bottom;
+		}
+
+		.text-input {
+			box-sizing: border-box;
+			background-color: #FFFFFF;
+			border: solid 1px #D3D3D3;
+			border-radius: 4px;
+			width: 380px;
+			height: 46px;
+			margin-left: 38px;
+			display: block;
+			margin-bottom: 18px; 
+			font-size: 18px;
+			line-height: 46px;
+			color: #787878;
+			padding-left: 10px;
+			
+			&:hover {
+				border: 1px solid #E55C06;
+			}
+
+			&:focus {
+				border: 1px solid #E55C06;
+			}
+		}
+
+		.forgot-password-container	{
+			margin-left: 38px;
+			height: auto;
+			height: 30px;
+			display: inline-block;
+			a {
+				line-height: 30px;
+			}
+
+		}
+		
+		.locale-selector {
+			display: inline-block;
+			float: right;
+			margin-right: 62px;
+			select {
+				margin: 0px;
+			}
+		}
+
+		.login-button-container {
+			font-size: 18px;
+
+			.login-button {
+				margin-left: 250px;
+				margin-top: 50px;
+			}
+		}
+
+		.wrong-login {
+			width: 420px;
+			background: none;
+			border: 1px solid #FF0000;
+			border-radius: 4px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			color: #FF0000;
+			margin-top: 15px;
+			padding-bottom: 10px;
+			padding-top: 10px;
+		}
+
+	}
+
+	button {
+		border: none;
+		font-family: "sans-serif";
+
+		&:focus {
+			outline: none;
+		}
+
+		&::-moz-focus-inner {
+			border: 0px;
+		}
+	}
+}

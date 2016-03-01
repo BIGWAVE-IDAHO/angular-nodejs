@@ -1,0 +1,28 @@
+<div class="menu-item" ng-class="{'first': $first, 'last': $last}">
+	<div class="tree-node" ng-click="handleExpandButtonClick($event, item)"
+		 ng-class="{'expandable': item.items && item.items.length > 0}">
+		<div class="content" ng-class="item.mainClass">
+			<div class="icon">
+			</div>
+			<div class="tree-node-title">
+				{{ item.title | translate }}
+			</div>
+			<div class="expand-button-icon">
+				<div class="expand-icon">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="sub-list-container"
+	ng-class="item.listClass">
+	<div class="sub-items"
+		ng-class="{'expanded': item.sublistExpanded}">
+		<div ng-repeat="item in item.items"  
+			ng-click="item.clickHandler($event)" >
+			<div ng-include="'/view/menu-item-tree-node.html'">
+			</div>
+		</div>
+	</div>
+</div>

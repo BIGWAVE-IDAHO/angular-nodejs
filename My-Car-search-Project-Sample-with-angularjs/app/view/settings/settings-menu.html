@@ -1,0 +1,26 @@
+<div class="settings-container">
+
+	<div class="settings-options">
+		<div ng-repeat="optionItem in selectedOptionTabItems" class="settings-option-item" ng-click="handleOptionItemClick(optionItem)" 
+				ng-class="{ 'selected': optionItem.key == selectedTabKey }">
+			<span>{{ optionItem.label | translate }}</span>
+		</div>
+	</div>
+
+	<div class="settings-selected-tab">
+		<div profile-edit profile="model.profile" ng-if="selectedTabKey == 'PROFILE_EDIT'">
+		</div>
+
+		<div silverdat-settings dat-credentials="model.datCredentials" ng-if="selectedTabKey == 'SILVERDAT_CREDENTIALS'">
+		</div>
+
+		<div cardetective-settings duplicate-properties="model.duplicateProperties" ng-if="selectedTabKey == 'CD_INFORMATION'">
+		</div>
+
+		<div service-providers-settings service-providers="model.serviceProviders" ng-if="selectedTabKey == 'SERVICE_PROVIDERS_CONFIGURATION'">
+		</div>
+
+		<div result-page-size-settings page-size="model.pageSizeConfiguration" ng-if="selectedTabKey == 'RESULT_PAGE_SIZE_CONFIGURATION'">
+		</div>
+	</div>
+</div>

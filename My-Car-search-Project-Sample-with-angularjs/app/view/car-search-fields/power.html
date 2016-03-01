@@ -1,0 +1,43 @@
+<span class="dropdown-label">
+		{{ 'Power' | translate }}
+</span>
+
+<div class="two-columns">
+	<div class="search-field" ng-class="{'filled': model.minimalPower}">
+		<ui-select 
+			ng-model="model.minimalPower" 
+			ng-change="handleMinimalPowerChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'From' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value | translate }}
+			</ui-select-match>
+			<ui-select-choices 
+				repeat="value in dropDownOptionsArrays.POWER | startsWith:'value':$select.search | orderBy: orderByNumber">
+				{{ value.value | translate }}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+
+	<div class="search-field" ng-class="{'filled': model.maximalPower}">
+		<ui-select 
+			ng-model="model.maximalPower" 
+			ng-change="handleMaximalPowerChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'To' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value | translate }}
+			</ui-select-match>
+			<ui-select-choices 
+				repeat="value in dropDownOptionsArrays.POWER | startsWith:'value':$select.search | orderBy: orderByNumber">
+				{{ value.value | translate }}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+</div>

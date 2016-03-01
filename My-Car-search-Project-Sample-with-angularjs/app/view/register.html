@@ -1,0 +1,400 @@
+<section class="container register-section section noselect" >
+	<div class="contact-info">
+		<div class="title">
+			{{ 'Contacts' | translate }}
+		</div>
+		<div class="email">
+			<span class="icon">
+			</span>
+			info@cardetektiv.de
+		</div>
+		<div class="phone">
+			<span class="icon">
+			</span>
+			+49 38 75 1/33 00-0 
+		</div>
+	</div>
+	<div class="registration-form-container">
+		<form 
+			class="registration-form"
+			novalidate
+			name="registrationForm">
+
+			<div class="input-container">
+				<div ng-if="!success">
+					<div class="description-label-column">
+						{{ 'E-mail address:' | translate }}
+					</div>
+					<div class="input-column">
+						<input type="email" required name="email" ng-model="registration.email" 
+							ng-focus="handleEmailInputFocus($event)"
+							class="text-input"/>
+						<span ng-show="registrationForm.email.$touched" 
+							class="validation-response">
+							<span class="error-message" ng-show="registrationForm.email.$invalid">
+								<span ng-show="registrationForm.email.$error.required">	
+									<div class="title">
+										{{ 'The e-mail is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Please enter your e-mail!' | translate }}
+									</div>
+								</span>
+								<span ng-show="registrationForm.email.$error.email">
+									<div class="title">
+										{{ 'This is not a valid e-mail.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Please enter a valid e-mail!' | translate }}
+									</div>
+								</span>
+							</span>
+							<span class="valid-message" ng-show="registrationForm.email.$valid">
+								<div class="icon">
+								</div>
+							</span>
+						</span>
+						<span ng-show="registrationForm.email.$untouched"
+							class="star">
+							*
+						</span>
+					</div>
+
+					<div class="description-label-column">
+						{{ 'Password:' | translate }}
+					</div>
+					<div class="input-column">
+						<input type="password" required="" name="password" 
+							ng-model="registration.password" 
+							ng-focus="handlePasswordInputFocus($event)"
+							password-validation
+							class="text-input"/>
+						<span ng-show="registrationForm.password.$touched" 
+							class="validation-response">
+							<span class="error-message" ng-show="registrationForm.password.$invalid">
+								<span ng-show="registrationForm.password.$error.DIGITS_REQUIRED" >
+									<div class="title">
+										{{ 'The password is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Password should contain at least one digit.' | translate }}
+									</div>
+								</span>
+								<span ng-show="registrationForm.password.$error.UPPER_AND_LOWER_CASE_REQUIRED" >
+									<div class="title">
+										{{ 'The password is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Password should contain at least one lower and upper case letters.' | translate }}
+									</div>
+								</span>
+								<span ng-show="registrationForm.password.$error.AT_LEAST_EIGHT_CHARACTERS" >
+									<div class="title">
+										{{ 'The password is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Password should be at least 8 characters.' | translate }}
+									</div>
+								</span>
+							</span>
+							<span ng-show="registrationForm.password.$valid" 
+								class="valid-message">
+								<div class="icon">
+								</div>
+							</span>
+						</span>
+						<span ng-show="registrationForm.password.$untouched" 
+							class="star">
+							*
+						</span>
+					</div>
+
+					<div class="description-label-column">
+						{{ 'Repeat Password:' | translate }}
+					</div>
+					<div class="input-column">
+						<input type="password" required="" name="repeatPassword" 
+							ng-model="registration.repeatPassword" 
+							ng-focus="handleRepeatPasswordInputFocus($event)" 
+							password-validation
+							class="text-input" />
+						<span ng-show="registrationForm.repeatPassword.$touched" 
+							class="validation-response">
+							<span class="error-message" 
+								ng-show="registrationForm.repeatPassword.$invalid">
+								<span ng-show="registrationForm.repeatPassword.$error.DIGITS_REQUIRED" >
+									<div class="title">
+										{{ 'The password is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Password should contain at least one digit.' | translate }}
+									</div>
+								</span>
+								<span ng-show="registrationForm.repeatPassword.$error.UPPER_AND_LOWER_CASE_REQUIRED" >
+									<div class="title">
+										{{ 'The password is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Password should contain at least one lower and upper case letters.' | translate }}
+									</div>
+								</span>
+								<span ng-show="registrationForm.repeatPassword.$error.AT_LEAST_EIGHT_CHARACTERS" >
+									<div class="title">
+										{{ 'The password is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Password should be at least 8 characters.' | translate }}
+									</div>
+								</span>
+							</span>
+							<span ng-show="registrationForm.repeatPassword.$valid" 
+								class="valid-message">
+								<div class="icon">
+								</div>
+							</span>
+						</span>
+						<span ng-show="registrationForm.repeatPassword.$untouched" 
+							class="star">
+							*
+						</span>
+					</div>
+
+					<div class="description-label-column">
+						{{ 'Honorific:' | translate }}
+					</div>
+					<div class="input-column">
+						<input type="radio" id="MALE" value="MALE" ng-model="registration.honorific" 
+							ng-focus="handleMaleHonorificRadioFocus($event)" /> 
+						<label for="MALE" class="radio-button-label">
+							<span class="radio-button-image">
+							</span>
+							{{ 'Mr' | translate }}
+						</label>
+						<input type="radio" id="FEMALE" value="FEMALE" ng-model="registration.honorific"
+							ng-focus="handleFemaleHonorificRadioFocus($event)" />
+						<label for="FEMALE" class="radio-button-label">
+							<span class="radio-button-image">
+							</span>
+							{{ 'Mrs' | translate }}
+						</label>
+					</div>
+
+					<div  class="description-label-column">
+						{{ 'Industry:' | translate }}
+					</div>
+					<div class="input-column">
+						<ui-select ng-model="registration.role"
+							ng-change="handleRoleChange()" 
+							theme="select2"
+							reset-ui-select-active-index>
+							<ui-select-match allow-clear="false">
+								{{ $select.selected.name | translate }}
+							</ui-select-match>
+
+							<ui-select-choices 
+								repeat="role in roles">
+								{{ role.name | translate }}
+							</ui-select-choices>
+						</ui-select>
+					</div>
+
+					<div class="description-label-column">
+						{{ 'Company:' | translate }}
+					</div>
+					<div class="input-column">
+						<input required="" name="companyName" 
+							ng-model="registration.companyName" 
+							ng-focus="handleCompanyNameInputFocus($event)"
+							class="text-input" />
+						<span ng-show="registrationForm.companyName.$touched"
+							class="validation-response">
+							<span class="error-message" 
+								ng-show="registrationForm.companyName.$invalid">
+								<span ng-show="registrationForm.companyName.$error.required" >
+									<div class="title">
+										{{ 'The company name is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Please enter your company name!' | translate }}
+									</div>
+								</span>
+							</span>
+							<span ng-show="registrationForm.companyName.$valid"
+								class="valid-message">
+								<div class="icon">
+								</div>
+							</span>
+						</span>
+						<span ng-show="registrationForm.companyName.$untouched"
+							class="star">
+							*
+						</span>
+					</div>
+
+					<div class="description-label-column">
+						{{ 'First Name:' | translate }}
+					</div>
+					<div class="input-column">
+						<input type="text" required="" name="firstName" 
+							ng-model="registration.firstName" 
+							ng-focus="handleFirstNameInputFocus($event)" 
+							class="text-input" />
+						<span ng-show="registrationForm.firstName.$touched"
+							class="validation-response">
+							<span class="error-message" 
+								ng-show="registrationForm.firstName.$invalid">
+								<span ng-show="registrationForm.firstName.$error.required">
+									<div class="title">
+										{{ 'The first name is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Please enter your first name!' | translate }}
+									</div>
+								</span>
+							</span>
+							<span ng-show="registrationForm.firstName.$valid"
+								class="valid-message">
+								<div class="icon">
+								</div>
+							</span>
+						</span>
+						<span ng-show="registrationForm.firstName.$untouched"
+							class="star">
+							*
+						</span>
+					</div>
+
+					<div class="description-label-column">
+						{{ 'Last Name:' | translate }}
+					</div>
+					<div class="input-column">
+						<input type="text" required="" name="lastName" 
+							ng-model="registration.lastName"
+							ng-focus="handleLastNameInputFocus($event)"
+							class="text-input" />
+						<span ng-show="registrationForm.lastName.$touched"
+							class="validation-response">
+							<span class="error-message" 
+								ng-show="registrationForm.lastName.$invalid">
+								<span ng-show="registrationForm.lastName.$error.required">
+									<div class="title">
+										{{ 'The last name is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Please enter your last name!' | translate }}
+									</div>
+								</span>
+							</span>
+							<span ng-show="registrationForm.lastName.$valid"
+								class="valid-message">
+								<div class="icon">
+								</div>
+							</span>
+						</span>
+						<span ng-show="registrationForm.lastName.$untouched"
+							class="star">
+							*
+						</span>
+					</div>
+
+					<div class="description-label-column">
+						{{ 'Phone:' | translate }}
+					</div>
+					<div class="input-column">
+						<input required="" name="phone" 
+							ng-model="registration.phone"
+							ng-focus="handlePhoneInputFocus($event)"
+							class="text-input" />
+						<span ng-show="registrationForm.phone.$touched"
+							class="validation-response">
+							<span class="error-message" 
+								ng-show="registrationForm.phone.$invalid">
+								<span ng-show="registrationForm.phone.$error.required" >
+									<div class="title">
+										{{ 'The phone is required.' | translate }}
+									</div>
+									<div class="subtitle">
+										{{ 'Please enter your phone!' | translate }}
+									</div>
+								</span>
+							</span>
+							<span ng-show="registrationForm.phone.$valid"
+								class="valid-message">
+								<div class="icon">
+								</div>
+							</span>
+						</span>
+						<span ng-show="registrationForm.phone.$untouched"
+							class="star">
+							*
+						</span>
+					</div>
+
+					<div class="description-label-column acknowledge-channel">
+						{{ 'Where did you hear about us?' | translate }}
+					</div>
+
+					<div class="input-column">
+						<textarea name="acknowledgeChannel" 
+							ng-model="registration.acknowledgeChannel"
+							ng-focus="handleAcknowledgeChannelInputFocus($event)"
+							class="text-input acknowledge-channel" maxlength="1000">
+						</textarea>
+					</div>
+
+					<div class="captcha">
+						<div vc-recaptcha key="recaptchaKey"></div>
+					</div>
+
+					<div class="form-footer-container">
+						<div class="form-footer">
+							<span class="label">
+								<span class="star">
+									* 
+								</span>
+								{{ 'Required' | translate }}
+							</span>
+							<div class="submit-button-container">
+								<div ng-click="registrationForm.$valid ? handleSubmitButtonClick($event) : ''"
+									ng-class="{'disabled': registrationForm.$invalid}"
+									ng-disabled="registrationForm.$invalid"
+									class="submit-button">
+									<div class="label">
+										{{ 'Register' | translate }}
+									</div>
+									<div class="vertical-separator-container">
+										<div class="icon">
+										</div>
+									</div>
+									<div class="icon-container">
+										<div class="icon">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="registration-feedback">
+							<div ng-if="registrationErrorMessage"
+								class="registration-error">
+								{{ registrationErrorMessage ? (registrationErrorMessage | translate) : ''}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="registration-feedback">
+					<div ng-if="success" class="successfull-registration">
+						{{ 'Thank you for your application. In brief your account will be activated.' | translate }}
+						<a ui-sref="login" class="login-link"> {{ 'To the login page.' | translate}}</a>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="form-title">
+			<div class="icon-container">
+				<div class="icon">
+				</div>
+			</div>
+			{{ 'Registration' | translate }}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,45 @@
+<div class="saved-searches-container">
+	<div class="heading">{{ 'Saved searches' | translate }}</div>
+
+	<div class="no-searches" ng-if="ngDialogData.searches.length <= 0">
+		{{ 'There are no saved searches' | translate }}
+	</div>
+	<table ng-if="ngDialogData.searches.length > 0">
+		<th>{{ 'Date' | translate }}</th>
+		<th>{{ 'Make' | translate }}</th>
+		<th>{{ 'Model' | translate }}</th>
+		<th>{{ 'Mileage' | translate }}</th>
+		<th>{{ 'Power' | translate }}</th>
+		<th>{{ 'Fuel' | translate }}</th>
+		<th>{{ 'First registration' | translate }}</th>
+		<th>{{ 'Version' | translate }}</th>
+		<th>{{ 'Remark' | translate }}</th>
+		<th></th>
+
+		<tr class="item" ng-repeat="search in ngDialogData.searches" ng-click="ngDialogData.loadSearchDetailsCallback(search._id, true)">
+			<td>{{ ngDialogData.moment(search.lastModifiedDate).format("DD-MM-YYYY") }}</td>
+			<td>{{ ngDialogData.makesMapping[search.make].name }}</td>
+			<td>{{ ngDialogData.makesMapping[search.make].models[search.model].model }}</td>
+			<td>
+				{{ search.minimalMileage ? (search.minimalMileage | localizedNumberFormatter) : '' }} - 
+				{{ search.maximalMileage ? (search.maximalMileage | localizedNumberFormatter) : ''}}
+			</td>
+			<td>
+				{{ search.minimalPower ? (search.minimalPower | localizedNumberFormatter) + "KW" : ''}} - 
+				{{ search.maximalPower ? (search.maximalPower | localizedNumberFormatter) + "KW" : ''}}
+			</td>
+			<td>
+				<span ng-repeat="fuelType in search.fuelTypes.split(',')">
+					{{ ngDialogData.lookupData["FUEL"][fuelType].value | translate }}
+				</span>
+			</td>
+			<td>{{ search.minimalYear }} - {{ search.maximalYear }}</td>
+			<td>{{ search.version }}</td>
+			<td>{{ search.remark }}</td>
+			<td>
+				<div class="trash" ng-click="ngDialogData.deleteSearchCallback($index, ngDialogData.searches, $event)">
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>

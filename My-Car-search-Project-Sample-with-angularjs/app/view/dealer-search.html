@@ -1,0 +1,66 @@
+<section class="container dealer-search-section section cardetective-select2-theme">
+	
+	<div class="main-content">
+		<div class="secion-title">
+			<div class="title-icon">
+			</div>
+			<span class="title">
+				{{ 'Dealer Search' | translate }}
+			</span>
+		</div>
+		<div class="search-parameters">
+			<input class="dealer-name text-input parameter-input" type="text" ng-model="model.dealerName" placeholder="{{ 'Name' | translate }}"/>
+			
+			<input type="text" class="zip text-input parameter-input" ng-model="model.zipCode" placeholder="{{ 'Zip code' | translate }}"/>
+			
+			
+			<div class="country parameter-input">
+				<ui-select 
+					ng-model="model.selectedCountry"
+					theme="select2"
+					reset-search-input="true">
+					<ui-select-match 
+						placeholder="{{ 'Any' | translate }}" 
+						reset-search-input="true">
+						{{ $select.selected.value | translate }}
+					</ui-select-match>
+					<ui-select-choices 
+						repeat="value in dropDownOptionsArrays.COUNTRY">
+						{{ value.value | translate }}
+					</ui-select-choices>
+				</ui-select>
+			</div>
+
+			<div class="radius parameter-input">
+				<div class="input-label">
+					{{ 'Radius' | translate }}
+				</div>
+				<ui-select 
+					ng-model="model.selectedRadius"
+					theme="select2"
+					reset-search-input="true">
+					<ui-select-match 
+						placeholder="{{ 'Any' | translate }}" 
+						allow-clear="true">
+						{{ $select.selected.value | translate }}
+					</ui-select-match>
+					<ui-select-choices 
+						repeat="value in dropDownOptionsArrays.ZIP_CODE_SEARCH_RADIUS">
+						{{ value.value | translate }}
+					</ui-select-choices>
+				</ui-select>
+			</div>
+			<input type="button" class="search-button" ng-click="handleSearchButtonClick()" value="{{ 'Go' | translate }}"/>
+
+		</div>
+	
+		<div class="result-view">
+			<div class="dealer-result-container">
+				<div ng-repeat="rowData in searchResult">
+					<div ng-include="'/view/dealer-row.html'" class="dealer-list-row" ng-class="{'even': $even, 'odd': $odd, 'last': $last}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

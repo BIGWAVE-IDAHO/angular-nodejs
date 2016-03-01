@@ -1,0 +1,27 @@
+<div class="expandable-checkbox-list">
+	<div class="header">
+		<div class="title-icon">
+		</div>
+		<div class="title">
+			{{ listTitle | translate }}
+		</div>
+		<div class="header-right">
+			<div class="toggle-button" ng-click="handleToggleButtonClick($event)">
+				<div class="toggle-button-icon" 
+					ng-class="{'up' : expanded, 'down': !expanded}">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="checkbox-list"
+		ng-class="{'expanded': expanded}">
+		<div class="items">
+			<span class="expandable-checkbox custom-checkbox"
+				ng-repeat="item in (items | filter: filterObject | orderBy: orderObject)">
+				<div custom-checkbox option-item="item">
+				</div>
+			</span>
+		</div>
+	</div>
+</div>

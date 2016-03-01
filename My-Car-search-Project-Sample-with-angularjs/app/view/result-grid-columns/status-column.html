@@ -1,0 +1,14 @@
+<div class="grid-cell status" ng-style="{'width': getColumnWidth(cell.id)}">
+	<div class="content">
+		{{ row.sellerTypeAbbreviation | translate }}
+	</div>
+	<div class="providers">
+		<div ng-repeat="provider in row.providers" class="content ad-provider-icon-holder">
+			<div class="ad-provider-small-icon" 
+			 ng-class="{'mobile-de-logo': provider.name == 'MOBILE_DE', 
+			 			'autoscout-logo': provider.name == 'AUTOSCOUT',
+			 			'pkw-logo': provider.name == 'PKW'}">
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="overall-statistics-report" ng-if="searchResult.length > 0">
+	<div class="overall-statistics-wrapper">
+		<div class="item" ng-show="lastSearchDate">
+			{{ 'last search' | translate }} : {{ lastSearchDate | localizedDateTime }}
+		</div>
+		<div class="item">
+			{{ 'results' | translate }}: {{ (model.estimatedResultCount - duplicatesCount) | localizedNumberFormatter }}
+		</div>
+		<div class="item" ng-show="statistics.vehiclesCount">
+			{{ 'filtered' | translate }}: {{ statistics.vehiclesCount }}
+		</div>
+		<div class="item" ng-show="statistics.minimalAdPrice">
+			{{ 'min price' |  translate }}: {{ Math.round(statistics.minimalAdPrice) | localizedCurrency }}
+		</div>
+		<div class="item average-price" ng-show="statistics.accumulatedAdPrice">
+			{{ 'price 𝝓' | translate }}: {{ Math.round(statistics.accumulatedAdPrice / statistics.vehiclesCount) | localizedCurrency }}
+		</div>
+		<div class="item" ng-show="statistics.maximalAdPrice">
+			{{ 'max price' | translate }}: {{ Math.round(statistics.maximalAdPrice) | localizedCurrency }} 
+		</div>
+		<div class="item" ng-show="statistics.accumulatedAdMileage">
+			{{ 'mileage 𝝓' | translate }}: {{ Math.round(statistics.accumulatedAdMileage / statistics.vehiclesCount) | localizedNumberFormatter}}
+		</div>
+		<div class="item" permission-evaluator ng-show="statistics.accumulatedAdLife && hasRole('DEALER')">
+			{{'ad active 𝝓' | translate }}: {{ Math.round(statistics.accumulatedAdLife / statistics.vehiclesCount) | localizedNumberFormatter}}
+		</div>
+	</div>
+</div>

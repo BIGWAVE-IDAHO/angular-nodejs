@@ -1,0 +1,21 @@
+<span class="dropdown-label">
+	{{ 'Doors' | translate }}
+</span>
+<div ng-class="{'filled': model.selectedDoors}">
+	<ui-select 
+		ng-model="model.selectedDoors" 
+		ng-change="handleDoorCountChange()"
+		theme="select2"
+		reset-search-input="true"
+		reset-ui-select-active-index>
+		<ui-select-match 
+			placeholder="{{ 'Any' | translate }}" 
+			allow-clear="true">
+			{{ $select.selected.value }}
+		</ui-select-match>
+		<ui-select-choices 
+			repeat="value in dropDownOptionsArrays.DOOR_COUNT | startsWith:'value':$select.search | orderBy: 'parseInt(key)'">
+			{{ value.value }}
+		</ui-select-choices>
+	</ui-select>
+</div>

@@ -1,0 +1,22 @@
+<div class="service-providers-settings">
+	<div class="save-data-button" ng-click="handleSaveButtonClick()">
+		{{ 'Change settings' | translate }}
+	</div>
+
+	<div class="service-providers-container">
+		<h2>
+			{{ 'Stocks' | translate }}
+		</h2>
+		<div class="service-providers">
+			<span class="service-providers-checkbox custom-checkbox"
+				ng-repeat="provider in serviceProviders">
+				<div class="checkbox-inline" custom-checkbox option-item="provider">
+				</div>
+				<div class="icon" ng-class="{'autoscout-icon': provider.key == 'AUTOSCOUT',
+											 'mobile-icon': provider.key == 'MOBILE_DE',
+											 'pkw-icon': provider.key == 'PKW'}">
+				</div>
+			</span>
+		</div>
+	</div>
+</div>

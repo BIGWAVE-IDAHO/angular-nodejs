@@ -1,0 +1,33 @@
+<div ng-show="resultItems.length > 0" ng-style="{width: accumulatedWidth()}">
+	<div class="grid-header">
+		<div class="grid-header-title row-number-header-cell">
+		</div>
+		<span class="grid-header-title" ng-repeat="headerCellData in headerTitleButtons" resizable="headerCellData" dragable is-draggable="{{ headerCellData.isDraggable }}" drag-target-template="view/dragable-component.html" column-order="{{ $index }}" ng-style="{'width': getColumnWidth(headerCellData.id)}" ng-class="headerCellData.cellClass">
+			<div ng-if="headerCellData.fieldName == 'checkbox'" class="select-all">
+				<div custom-checkbox class="content" option-item="allSelected">
+					<div class="checkbox-img" ng-class="{selected: allSelected}">
+					</div>
+				</div>
+			</div>
+
+			<div ng-click="handleHeaderButtonClick($event, headerCellData)" ng-class="{sortable: headerCellData.sortable, asc: (headerCellData.fieldName == predicate && !reverse), desc: (headerCellData.fieldName == predicate && reverse)}">
+			</div>
+			{{ headerCellData.headerTitle ? (headerCellData.headerTitle | translate) : ""}}
+		</span>
+	</div>
+	<div class="grid-row-wrapper"
+		ng-repeat="row in (filteredItems = (resultItems | filter: filterFunction | orderBy: sortFunction:reverse)) | startFrom: pageNumber * pageSize | limitTo: pageSize"
+		ng-class="{'last-row': ((pageNumber + 1) == ((filteredItems.length / pageSize) | ceil)) ? (pageNumber * pageSize + $index + 1) == filteredItems.length : $index == (pageSize - 1)}">
+		<span class="row-number">
+			{{ pageNumber * pageSize + $index + 1 }}
+		</span>
+		<div ng-include src="rowTemplate" class="list-row" ng-class="{even: $index % 2 == 0, odd: $index %2 != 0, selected: selectedItem == row}">
+		</div>
+	</div>
+
+	<div class="paging">
+		<span class="buttons" ng-click="handlePageButtonClick(-1)"> {{ 'Previous Page' | translate }}</span>
+		<span>{{ 'Page' | translate }} {{ pageNumber + 1 }} {{ 'of' | translate }} {{ (filteredItems.length / pageSize | ceil) }}</span>
+		<span class="buttons" ng-click="handlePageButtonClick(1)">{{ 'Next Page' | translate }} </span>
+	</div>
+</div>

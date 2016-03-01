@@ -1,0 +1,43 @@
+<span class="dropdown-label">
+		{{ 'Price' | translate }}
+</span>
+
+<div class="two-columns">
+	<div class="search-field" ng-class="{'filled': model.minimalPrice}">
+		<ui-select 
+			ng-model="model.minimalPrice" 
+			ng-change="handleMinimalPriceChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'From' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value | localizedCurrency }}
+			</ui-select-match>
+			<ui-select-choices 
+				repeat="value in dropDownOptionsArrays.PRICE | startsWith:'value':$select.search | orderBy: orderByNumber">
+				{{ value.value | localizedCurrency }}
+			</ui-select-choices>
+		</ui-select>											
+	</div>
+
+	<div class="search-field" ng-class="{'filled': model.maximalPrice}">
+		<ui-select 
+			ng-model="model.maximalPrice" 
+			ng-change="handleMaximalPriceChange()"
+			theme="select2"
+			reset-search-input="true"
+			reset-ui-select-active-index>
+			<ui-select-match 
+				placeholder="{{ 'To' | translate }}" 
+				allow-clear="true">
+				{{ $select.selected.value | localizedCurrency }}
+			</ui-select-match>
+			<ui-select-choices 
+				repeat="value in dropDownOptionsArrays.PRICE | startsWith:'value':$select.search | orderBy: orderByNumber">
+				{{ value.value | localizedCurrency }}
+			</ui-select-choices>
+		</ui-select>
+	</div>
+</div>

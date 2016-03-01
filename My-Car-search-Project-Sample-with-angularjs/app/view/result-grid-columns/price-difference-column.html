@@ -1,0 +1,5 @@
+<div class="grid-cell price-difference" ng-style="{'width': getColumnWidth(cell.id)}">
+	<div class="content">
+		{{ (Math.round(row.priceDifference = (row.price ? (row.price - row.statistics.accumulatedAdPrice / resultItems.length) : 0))) | localizedCurrency }}
+	</div>
+</div>

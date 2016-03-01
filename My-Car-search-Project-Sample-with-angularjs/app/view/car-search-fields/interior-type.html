@@ -1,0 +1,21 @@
+<span class="dropdown-label">
+	{{ 'Interior Type' | translate }}
+</span>
+<div ng-class="{'filled': model.selectedInteriorType}">
+	<ui-select 
+		ng-model="model.selectedInteriorType"
+		ng-change="handleSelectedInteriorTypeChange()"
+		theme="select2"
+		reset-search-input="true"
+		reset-ui-select-active-index>
+		<ui-select-match 
+			placeholder="{{ 'Any' | translate }}"
+			allow-clear="true">
+			{{ $select.selected.value | translate}}
+		</ui-select-match>
+		<ui-select-choices 
+			repeat="value in dropDownOptionsArrays.INTERIOR_TYPE | startsWith:'value':$select.search:true | orderBy: ['isOther', 'value | translate']">
+			{{ value.value | translate }}
+		</ui-select-choices>
+	</ui-select>
+</div>
